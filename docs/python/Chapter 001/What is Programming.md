@@ -115,7 +115,7 @@
 <p>✅ Try the example code yourself.</p>
 <p>✅ Read the code and the explanation for it again.</p>
 <p>✅ If there's something you haven't seen before in the tutorial and it's not explained, try to find it in the previous chapters.</p>
-<p>✅ If you can't find what you're looking for or you still have trouble understanding the tutorial or any other problems with the tutorial, please tell me about it by <strong><a href="https://github.com/milaan9/01_Python_Introduction/issues/new">Creating an issue on GitHub</a></strong>.</p>
+<p>✅ If you can't find what you're looking for or you still have trouble understanding the tutorial or any other problems with the tutorial, please tell me about it by <strong><a href="">Creating an issue on GitHub</a></strong>.</p>
 <p>✅ I want to improve this tutorial so other readers won't have the same problem as you have. You are free to combine this tutorial with other learning resources.</p>
 <p>If this tutorial isn't exactly what you're looking for you don't need to stick with nothing but this. You can find another tutorial and mix the tutorials however you want as long as you <strong>make sure that you understand everything you read</strong>.</p>
 
@@ -137,4 +137,3 @@
 <p>✅Experiment with things freely and don't fear mistakes.</p>
 <p>✅Error messages are our friends.</p>
 <p>✅Let me know if you have trouble with this tutorial.</p>
-<p>✅Now we're ready to <strong><a href="https://github.com/milaan9/01_Python_Introduction/blob/main/002_How_to_install_Python.ipynb">install Python</a></strong> and <strong><a href="https://github.com/milaan9/01_Python_Introduction/blob/main/003_Jupyter_Keyboard_Shortcuts_Practice.ipynb">get started</a></strong> and continue with the next file in the list!</p>

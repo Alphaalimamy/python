@@ -16,12 +16,13 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
+      
+         <div className={styles.buttons}>
+          {/* <Link
             className="button button--secondary button--lg"
             to="/docs/python">
             LEARN PYTHON THE EASY WAY
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>
