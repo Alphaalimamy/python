@@ -37,34 +37,34 @@ Python is a flexible language. For which applications can you use Python?
 - Clean and analyze data
 - All of the above
 
-
+```
 #### Example, do not modify!
 print(5 / 8)
 
 ##### Put code below here
 print(7+10)
-
+```
 ### Any comments?
 You can also add comments to your Python scripts. Comments are important to make sure that you and others can understand what your code is about and do not run as Python code.
 
 They start with `#` tag. See the comment in the editor, `#` Division; now it's your turn to add a comment!
 
 Above the print(7 + 10), add the comment
-
+```python
 # Addition
 # Division
 print(5 / 8)
 
 
 print(7 /10)
-
-### Variables and Types
+```
+### Variables
 Variable
 - A variable is a name that represents a storage location in the computer’s memory. 
 - Specific, case-sensitive name
 - Call up value through variable 
 
-## Creating Variables with Assignment Statements
+#### Creating Variables with Assignment Statements
 You use an assignment statement to create a variable and make it reference a piece of data.
 Here is an example of an assignment statement:
 ### 
@@ -160,7 +160,6 @@ print(first_name, last_name)
 ```
 ```
 Rugiatu Alpha
-
 ```
 ## exercises
 ```
@@ -195,7 +194,7 @@ After these statements execute, what is the Python data type of the values refer
 ```
 ### BMI Calculator
 ```math
-$$\text{BMI} = \frac{weight}{height^2}$$
+$$ \text{BMI} = \frac{weight}{height^2} $$
 ```
 ```python
 height = 1.79
@@ -252,9 +251,7 @@ print(savings)
 
 ### Calculations with variables
 - You've now created a savings variable, so let's start saving!
-
 - Instead of calculating with the actual values, you can use variables instead. The savings variable you created in the previous exercise with a value of 100 is available to you.
-
 -  How much money would you have saved four months from now, if you saved $10 each month?
 
 ```python
@@ -269,13 +266,12 @@ result = savings * growth_multiplier **7
 
 # Print out result
 print(result)
+```
 
 ### Other variable types
 - In the previous exercise, you worked with the integer Python data type:
-
 - int, or integer: a number without a fractional part. savings, with the value 100, is an example of an integer.
 - Next to numerical data types, there are three other very common data types:
-
 - float, or floating point: a number that has both an integer and fractional part, separated by a point. 1.1, is an example of a float.
 - str, or string: a type to represent text. You can use single or double quotes to build a string.
 - bool, or boolean: a type to represent logical values. It can only be True or False (the capitalization is important!).
@@ -298,7 +294,9 @@ profitable = True
 ### Guess the type
 - To find out the type of a value or `a` variable that refers to that value, you can use the `type()` function. Suppose you've defined a variable a, but you forgot the type of this variable. To determine the type of `a`, simply execute:
 
-`type(a)`
+```   
+type(a)
+```
 -  We already went ahead and created three variables: `a, b and c`. You can use the IPython shell to discover their type. Which of the following options is correct?
 
 ```python
@@ -318,6 +316,7 @@ type(y)
 ```python
 z = True
 type(z)
+```
 
 ### Operations with other types
 - Different data types behave differently in Python.
@@ -372,7 +371,7 @@ pi_string = "3.1415926"
 ### Can Python handle everything?
 - Now that you know something more about combining different sources of information, have a look at the four Python expressions below. Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
 
-## Instructions
+### Exercise
 
 Possible answers
 
@@ -381,7 +380,7 @@ Possible answers
 - "The correct answer to this multiple choice exercise is answer number " + 2
 - True + False
 
-## Input, Processing, and Output
+### Input, Processing, and Output
 Input is data that the program receives. When a program receives data, it usually processes it by performing some operation with it. The result of the operation is sent out of the program as output. Computer programs typically perform the following three-step process:
 1. Input is received.
 2. Some process is performed on the input.
@@ -503,21 +502,19 @@ In step 1, we get the original price of the item. We will prompt the user to ent
 
 In step 2, we calculate the amount of the discount. To do this, we multiply the original price by 20 percent. The following statement performs this calculation and assigns the result to the discount variable:
 
-discount = original_price * 0.2
+`discount = original_price * 0.2`
 
 In step 3, we subtract the discount from the original price. The following statement does this calculation and stores the result in the sale_price variable:
 
-sale_price = original_price - discount
+`sale_price = original_price - discount`
 
 Last, in step 4, we will use the following statement to display the sale price:
 
-print('The sale price is', sale_price)
+`print('The sale price is', sale_price)`
 
 ```python
 original_price = float(input("Enter the item's original price: "))
 
-
-```python
 # This program gets an item's original price and
 # calculates its sale price, with a 20% discount.
 # Get the item's original price.
@@ -709,7 +706,7 @@ A customer in a store is purchasing five items. Write a program that asks for th
 ## 5. Distance Traveled
 Assuming there are no accidents or delays, the distance that a car travels down the interstate can be calculated with the following formula:
 ```math
-$$ \text{Distance} = \text{Speed} \times \text{Time} $$
+ \text{Distance} = \text{Speed} \times \text{Time} 
 ```
 A car is traveling at 70 miles per hour. Write a program that displays the following:
 - The distance the car will travel in 6 hours
@@ -768,7 +765,7 @@ Write a program that displays the following information:
 - The amount of commission Alpha paid his broker when he sold the stock.
 - Display the amount of money that Alpha had left when he sold the stock and paid his broker (both times). If this amount is positive, then Alpha made a profit. If the amount is negative, then Alpha lost money.
 
-## 13. Planting Grapevines
+### 13. Planting Grapevines
 A vineyard owner is planting several new rows of grapevines, and needs to know how many grapevines to plant in each row. She has determined that after measuring the length of a future row, she can use the following formula to calculate the number of vines that will fit in the row, along with the trellis end-post assemblies that will need to be constructed at each end of the row:
 
 ```math
@@ -788,11 +785,12 @@ Write a program that makes the calculation for the vineyard owner. The program s
 
 Once the input data has been entered, the program should calculate and display the number of grapevines that will fit in the row.
 
-## 14. Compound Interest
+### 14. Compound Interest
 When a bank account pays compound interest, it pays interest not only on the principal amount that was deposited into the account, but also on the interest that has accumulated over time. Suppose you want to deposit some money into a savings account, and let the account earn compound interest for a certain number of years. The formula for calculating the balance of the account after a specified number of years is:
-```math
-$$ \text{A} = \text{P} (1 + \frac{r}{n})^{nt} $$
 ```
+$$ A = P \left(1 \+ \frac{r}{n}\right)^{nt} $$
+```
+
 The terms in the formula are:
 - **A** is the amount of money in the account after the specified number of years.
 - **P** is the principal amount that was originally deposited into the account.
