@@ -15,7 +15,7 @@ Python runs on windows, linux, mac and other environments. There are many python
 Scroll to the bottom of the page and click the “Windows” option just above the downloads.
 
 
-![image](../../img/A1.png)
+![image](../img/A1.png)
 
 I recommend getting a 64-bit version, as long as your computer is 64-bit.
 
@@ -30,10 +30,10 @@ I recommend getting a 64-bit version, as long as your computer is 64-bit.
 6. Select a destination folder to install Anaconda and click the Next button.
 
 
-![image](../../img/A3.png)
+![image](../img/A3.png)
 7. Choose whether to add Anaconda to your PATH environment variable. I recommend not adding Anaconda to the PATH environment variable, since this can interfere with other previously installed Python version. Instead, use Anaconda software by opening Anaconda Navigator or the Anaconda Prompt from the Start Menu. If installing python for first time check the first box.
 
-![image](../../img/A4.png)
+![image](../img/A4.png)
 8. Choose whether to register Anaconda as your default Python. Unless you plan on installing and running multiple versions of Anaconda or multiple versions of Python, accept the default and leave this box checked. 
 
 9. Click the Install button. If you want to watch the packages Anaconda is installing, click Show Details.
@@ -42,13 +42,13 @@ I recommend getting a 64-bit version, as long as your computer is 64-bit.
 
 11. Optional: To install PyCharm for Anaconda, click on the link to https://www.anaconda.com/pycharm.
 
-![image](../../img/A5.png)
+![image](../img/A5.png)
 
 Or to install Anaconda without PyCharm, click the Next button.
 
 12. After a successful installation you will see the “Thanks for installing Anaconda” dialog box:
 
-![image](../../img/A6.png)
+![image](../img/A6.png)
 
 12. If you wish to read more about Anaconda Cloud and how to get started with Anaconda, check the boxes “Learn more about Anaconda Cloud” and “Learn how to get started with Anaconda”. Click the Finish button.
 
@@ -59,7 +59,7 @@ Anaconda Navigator is a graphical user interface that is automatically installed
 
 **Windows**: Click Start, search or select Anaconda Navigator from the menu.
 
-![image](../../img/A7.png)
+![image](../img/A7.png)
 
 **macOS**: Click Launchpad, select Anaconda Navigator. Or, use Cmd+Space to open Spotlight Search and type “Navigator” to open the program.
 
@@ -73,7 +73,7 @@ To open Anaconda Prompt:
 
 **Windows**: Click Start, search, or select Anaconda Prompt from the menu.
 
-![image](../../img/A8.png)
+![image](../img/A8.png)
 
 **macOS**: Cmd+Space to open Spotlight Search and type “Navigator” to open the program.
 
@@ -110,7 +110,7 @@ Follow the following steps to run Python on your computer.
 2. Run the installer to install **Thonny** on your computer.
 3. Go to: **File** > **New**. Then save the file with **`.py`** extension. For example, **`hello.py`**, **`example.py`**, etc. You can give any name to the file. However, the file name should end with **`.py`**
 
-![image](../../img/setup4.png)
+![image](../img/setup4.png)
 
 
 4. Write Python code in the file and save it.
@@ -130,13 +130,13 @@ Download Windows x86 – 64 executable file only as installer will automatically
 Also, you can choose the path where Python is installed.
 
 
-![image](../../img/ps1.png)
+![image](../img/ps1.png)
 
 4. When the installation progress is completed, you will see the Disable path length limit. Now you must be thinking what is it and whats will happen if I will disable it. The answer is clear, it will remove the limitations on **MAX_PATH** variable. It will allow to use long path names for the Python. We recommend you to not disable this option as it will remove any path related issues while working in Windows. Therefore click on the close button to finish the installation.
 
 
 
-![image](../../img/setup2.png)
+![image](../img/setup2.png)
 
 5. Now, the Python is installed. You can check it either it is properly installed or not. You can do it through Command Prompt. Open the command prompt and type the following command -" **python -v** ". It will output the version of the Python.
 
@@ -152,7 +152,7 @@ Try typing in **`1 + 1`** and press enter. We get **`2`** as the output. This pr
 
 
 
-![image](../../img/ps2.png)
+![image](../img/ps2.png)
 ## 2. Run Python in the Integrated Development Environment (IDE)
 
 We can use any text editing software to write a Python script file.
@@ -163,12 +163,12 @@ By the way, when you install Python, an IDE named IDLE is also installed. You ca
 
 When you open IDLE, an interactive Python Shell is opened.
 
-![image](../../img/ps3.png)
+![image](../img/ps3.png)
 Now you can create a new file and save it with **.py** extension. For example, **hello.py**
 
 Write Python code in the file and save it. To run the file, go to **Run** > **Run Module** or simply click **F5**.
 
-![image](../../img/ps3.png)
+![image](../img/ps3.png)
 #  Python 3 Major Version Installation (Linux)
 
 Linux is an open source Operating System. There are many Linux based operating systems. Popular are **Ubuntu, Fedora, Linux Mint, Debian**. In this section you will learn how to do python installation for both Python 3 and Python 2 versions. **Fedora Linux OS** used for Installation of python. Most of the newer Linux based Operating system have **already installed Python**. You will check it is installed or not by the typing the following commands in terminal. 
@@ -183,7 +183,7 @@ You will see the python versions as output like in the below screenshot. But if 
 
 
 
-![image](../../img/setup3.png)
+![image](../img/setup3.png)
 
 If you are using Ubuntu 16.0 or newer version, then you can easily install Python 3.6 or Python 2.7 by typing the following commands 
 
