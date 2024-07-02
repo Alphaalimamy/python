@@ -7,16 +7,18 @@ const config = {
   tagline: 'LEARN PYTHON THE EASY',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://ai-python.netlify.app',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://alphaalimamy.github.io', // Your website URL
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Alphaalimamy', // Usually your GitHub org/user name.
+  projectName: 'alphaalimamy.github.io',
+  organizationName: 'alphaalimamy',
+  trailingSlash: false,
+
   projectName: 'python', // Usually your repo name.
+
+
+  // Set the production url of your site here
+  url: 'https://ai-python.netlify.app',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -78,15 +80,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/python',
-              },
-            ],
-          },
+         
           {
             title: 'Community',
             items: [
@@ -106,7 +100,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'https://github.com/Alphaalimamy/python.git',
               },
               {
                 label: 'GitHub',

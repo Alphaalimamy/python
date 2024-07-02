@@ -18,23 +18,27 @@
 ✅ **[Python Namespace & Scope](https://github.com/Alphaalimamy/python-training.git)**  
 ✅ **[Python Keyword List](https://github.com/Alphaalimamy/python-training.git)**  
 
-## [Python Data Types](https://github.com/Alphaalimamy/python-training.git)
-✅ **[Python Numbers](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python String](https://github.com/Alphaalimamy/python-training.git)**  
+## [Decision Structures and Boolean Logic](https://github.com/Alphaalimamy/python-training.git)
+✅ **[The if Statement](https://github.com/Alphaalimamy/python-training.git)**   
+✅ **[Python if-else statement](https://github.com/Alphaalimamy/python-training.git)**  
+✅ **[Python if-elif-else statement](https://github.com/Alphaalimamy/python-training.git)**  
+✅ **[Python Nested if statement](https://github.com/Alphaalimamy/python-training.git)** 
+✅ **[Comparing Strings](https://github.com/Alphaalimamy/python-training.git)** 
+✅ **[Logical Operators](https://github.com/Alphaalimamy/python-training.git)** 
+✅ **[Boolean Variables](https://github.com/Alphaalimamy/python-training.git)** 
+
+
+
+✅ **[Repetition Structures](https://github.com/Alphaalimamy/python-training.git)**
+✅ **[Python while loop](https://github.com/Alphaalimamy/python-training.git)**  
+✅ **[Python break, continue & pass statements](https://github.com/Alphaalimamy/python-training.git)
+
+
+## [Python Data Structures](https://github.com/Alphaalimamy/python-training.git)
 ✅ **[Python List](https://github.com/Alphaalimamy/python-training.git)**  
 ✅ **[Python Tuple](https://github.com/Alphaalimamy/python-training.git)**  
 ✅ **[Python Dictionary](https://github.com/Alphaalimamy/python-training.git)**  
 ✅ **[Python Sets](https://github.com/Alphaalimamy/python-training.git)**  
-
-## [Python Flow Control](https://github.com/Alphaalimamy/python-training.git)
-✅ **[Python Flow Control Statement](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python if statement](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python if-else statement](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python if-elif-else statement](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python Nested if statement](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python for loop](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python while loop](https://github.com/Alphaalimamy/python-training.git)**  
-✅ **[Python break, continue & pass statements](https://github.com/Alphaalimamy/python-training.git)**  
 
 ## [Python Functions](https://github.com/Alphaalimamy/python-training.git)
 ✅ **[Python Functions](https://github.com/Alphaalimamy/python-training.git)**  

@@ -197,7 +197,7 @@ If you are using Ubuntu 16.0 or newer version, then you can easily install Pytho
 
 python --version
 
-Download the Python 3 or 2 new version. At the time of writing this post , **Python 3.7.4 - July 8, 2019** was the newer version. Download the **[Mac OS X 64-bit/32-bit]((https://www.python.org/downloads/mac-osx/))** installer. Run the package and following the installation steps to install the python packages
+Download the Python 3 or 2 new version. At the time of writing this post , **Python 3.12.4 - June 8, 2024** was the newer version. Download the **[Mac OS X 64-bit/32-bit](https://www.python.org/downloads/mac-osx/)** installer. Run the package and following the installation steps to install the python packages
 
 After the **successful installation**, you can check the python version by using the same command.
 
