@@ -37,19 +37,24 @@ Python is a flexible language. For which applications can you use Python?
 - Clean and analyze data
 - All of the above
 
-```
+```python
 #### Example, do not modify!
 print(5 / 8)
 
 ##### Put code below here
 print(7+10)
 ```
-### Any comments?
-You can also add comments to your Python scripts. Comments are important to make sure that you and others can understand what your code is about and do not run as Python code.
+### Comments
+You can also add comments to your Python scripts. Comments are important to make sure that you and others can understand what your code is about and do not run as Python code. Comments are notes in the code that the Python interpreter ignores. They are used to explain code and make it more readable. 
 
 They start with `#` tag. See the comment in the editor, `#` Division; now it's your turn to add a comment!
 
-Above the print(7 + 10), add the comment
+### Types of Comments 
+There are two main types of comments in Python:
+
+#### Single-Line Comments
+Single-line comments begin with a hash symbol (#) and extend to the end of the line. They are used to write brief explanations or notes about the code.
+
 ```python
 # Addition
 # Division
@@ -58,8 +63,31 @@ print(5 / 8)
 
 print(7 /10)
 ```
+
+#### Multi-Line Comments
+Multi-line comments are used for longer explanations or notes that span multiple lines. In Python, there is no special syntax for multi-line comments. Instead, you can use multiple single-line comments or a string (enclosed in triple quotes) that is not assigned to any variable.
+
+```python
+"""
+This is a multi-line comment.
+It can span multiple lines and
+is enclosed in triple quotes.
+"""
+z = 15
+```
+
+### Exercises
+```
+1. What is comment?
+2. State and explain the types of comments
+3. Define variables for the width and height of the rectangle.
+    - Write a comment explaining that you are calculating the area of the rectangle.
+    - Calculate the area and store it in a variable.
+    - Write a comment explaining that you are printing the area.
+    - Print the area.
+
+```
 ### Variables
-Variable
 - A variable is a name that represents a storage location in the computer’s memory. 
 - Specific, case-sensitive name
 - Call up value through variable 
