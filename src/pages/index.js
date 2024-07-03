@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="The Easy way to learn Python">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

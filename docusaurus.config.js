@@ -7,7 +7,7 @@ const config = {
   tagline: 'LEARN PYTHON THE EASY',
   favicon: 'img/favicon.ico',
 
-  url: 'https://learnpython.netlify.app', // https://alphaalimamy.github.io
+  url: 'https://ai-python.netlify.app', // https://alphaalimamy.github.io
   baseUrl: '/',
 
   projectName: 'alphaalimamy.github.io',
@@ -18,7 +18,6 @@ const config = {
 
 
   // Set the production url of your site here
-  url: 'https://ai-python.netlify.app',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -59,7 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.jpg',
       navbar: {
         title: 'AI LAB',
         logo: {
