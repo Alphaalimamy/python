@@ -7,7 +7,7 @@ const config = {
   tagline: 'LEARN PYTHON THE EASY',
   favicon: 'img/favicon.ico',
 
-  url: 'https://alphaalimamy.github.io', // Your website URL
+  url: 'https://learnpython.netlify.app', // https://alphaalimamy.github.io
   baseUrl: '/',
 
   projectName: 'alphaalimamy.github.io',
