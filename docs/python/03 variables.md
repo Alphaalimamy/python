@@ -663,10 +663,9 @@ In steps 1 through 3, we will prompt the user to enter the specified values. We 
 
 In step 4, we calculate the present value, which is the amount of money that we will have to deposit. We will convert the formula previously shown to the following statement. The statement stores the result of the calculation in the `present_value` variable.
 
-```python
-present_value = future_value / (1.0 + rate)**years
+$$present_value = future_value / (1.0 + rate)**years$$
 
-```
+
 In step 5, we display the value in the present_value variable.
 
 ```python
