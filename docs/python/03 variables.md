@@ -679,8 +679,7 @@ rate = float(input('Enter the annual interest rate: '))
 years = int(input('Enter the number of years the money will grow: '))
 
 # Calculate the amount needed to deposit.
-$$present_value = future\_value / (1.0 + rate)^years$$
-
+present_value = future_value / (1.0 + rate)**years
 # Display the amount needed to deposit.
 print('You will need to deposit this amount:' present_value)
 ```
@@ -758,7 +757,7 @@ Write a program that calculates the total amount of a meal purchased at a restau
 ## 9. Celsius to Fahrenheit Temperature Converter
 Write a program that converts Celsius temperatures to Fahrenheit temperatures. The formula is as follows:
 
-$$ F = \frac{9}{5}C + 32  $$
+$$F = \frac{9}{5}C + 32$$
 The program should ask the user to enter a temperature in Celsius, then display the temperature converted to Fahrenheit.
 
 ## 10. Ingredient Adjuster
@@ -795,7 +794,7 @@ Write a program that displays the following information:
 A vineyard owner is planting several new rows of grapevines, and needs to know how many grapevines to plant in each row. She has determined that after measuring the length of a future row, she can use the following formula to calculate the number of vines that will fit in the row, along with the trellis end-post assemblies that will need to be constructed at each end of the row:
 
 
-$$ V = \frac{R - 2E}{S} $$
+$$V = \frac{R - 2E}{S}$$
 
 
 The terms in the formula are:
@@ -814,7 +813,7 @@ Once the input data has been entered, the program should calculate and display t
 ### 14. Compound Interest
 When a bank account pays compound interest, it pays interest not only on the principal amount that was deposited into the account, but also on the interest that has accumulated over time. Suppose you want to deposit some money into a savings account, and let the account earn compound interest for a certain number of years. The formula for calculating the balance of the account after a specified number of years is:
 
-$$ A = P \left(1 \+ \frac{r}{n}\right)^{nt} $$
+$$A = P(1 \+ \frac{r}{n}\right)^{nt}$$
 
 
 The terms in the formula are:
