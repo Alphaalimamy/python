@@ -663,7 +663,7 @@ In steps 1 through 3, we will prompt the user to enter the specified values. We 
 
 In step 4, we calculate the present value, which is the amount of money that we will have to deposit. We will convert the formula previously shown to the following statement. The statement stores the result of the calculation in the `present_value` variable.
 
-$$present_value = future_value / (1.0 + rate)**years$$
+$$present_value = future\_value / (1.0 + rate)^years$$
 
 
 In step 5, we display the value in the present_value variable.
@@ -679,7 +679,7 @@ rate = float(input('Enter the annual interest rate: '))
 years = int(input('Enter the number of years the money will grow: '))
 
 # Calculate the amount needed to deposit.
-present_value = future_value / (1.0 + rate)**years
+$$present_value = future\_value / (1.0 + rate)^years$$
 
 # Display the amount needed to deposit.
 print('You will need to deposit this amount:' present_value)
