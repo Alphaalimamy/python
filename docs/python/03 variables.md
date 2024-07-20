@@ -221,9 +221,9 @@ After these statements execute, what is the Python data type of the values refer
     print(my_value)
 ```
 ### BMI Calculator
-```math
-$$ \text{BMI} = \frac{weight}{height^2} $$
-```
+
+$$\text{BMI} = \frac{weight}{height^2}$$
+
 ```python
 height = 1.79
 weight = 68.7
@@ -369,7 +369,7 @@ intro = "Hello! How are you?"
 
 # Assign sum of intro and intro to doubleintro
 
-# Print out doubleintro
+# Print out double intro
 ```
 ### Type conversion
 - Using the + operator to paste together two strings can be very useful in building custom messages.
@@ -642,9 +642,9 @@ Seconds: 30.0
 # Converting a Math Formula to a Programming Statement
 
 Suppose you want to deposit a certain amount of money into a savings account and leave it alone to draw interest for the next 10 years. At the end of 10 years, you would like to have $10,000 in the account. How much do you need to deposit today to make that happen? You can use the following formula to find out:
-```math
+
 $$\text{P} = \frac{F}{(1 + r)^n} $$
-```
+
 The terms in the formula are as follows:
 - **P** is the present value, or the amount that you need to deposit today.
 - **F** is the future value that you want in the account. (In this case, F is Le 10,000.)
@@ -733,9 +733,9 @@ A customer in a store is purchasing five items. Write a program that asks for th
 
 ## 5. Distance Traveled
 Assuming there are no accidents or delays, the distance that a car travels down the interstate can be calculated with the following formula:
-```math
- \text{Distance} = \text{Speed} \times \text{Time} 
-```
+
+$$\text{Distance} = \text{Speed} \times \text{Time}$$
+
 A car is traveling at 70 miles per hour. Write a program that displays the following:
 - The distance the car will travel in 6 hours
 - The distance the car will travel in 10 hours
@@ -748,9 +748,9 @@ Write a program that will ask the user to enter the amount of a purchase. The pr
 
 ## 7. Miles-per-Gallon
 A car’s miles-per-gallon (MPG) can be calculated with the following formula:
-```math
+
 $$ MPG = \frac{\text{Miles driven}}{\text{Gallons of gas used}} $$
-```
+
 Write a program that asks the user for the number of miles driven and the gallons of gas used. It should calculate the car's MPG and display the result.
 
 ## 8. Tip, Tax, and Total
@@ -758,9 +758,8 @@ Write a program that calculates the total amount of a meal purchased at a restau
 
 ## 9. Celsius to Fahrenheit Temperature Converter
 Write a program that converts Celsius temperatures to Fahrenheit temperatures. The formula is as follows:
-```math
+
 $$ F = \frac{9}{5}C + 32  $$
-```
 The program should ask the user to enter a temperature in Celsius, then display the temperature converted to Fahrenheit.
 
 ## 10. Ingredient Adjuster
@@ -796,9 +795,9 @@ Write a program that displays the following information:
 ### 13. Planting Grapevines
 A vineyard owner is planting several new rows of grapevines, and needs to know how many grapevines to plant in each row. She has determined that after measuring the length of a future row, she can use the following formula to calculate the number of vines that will fit in the row, along with the trellis end-post assemblies that will need to be constructed at each end of the row:
 
-```math
+
 $$ V = \frac{R - 2E}{S} $$
-```
+
 
 The terms in the formula are:
 - **V** is the number of grapevines that will fit in the row.
@@ -815,9 +814,9 @@ Once the input data has been entered, the program should calculate and display t
 
 ### 14. Compound Interest
 When a bank account pays compound interest, it pays interest not only on the principal amount that was deposited into the account, but also on the interest that has accumulated over time. Suppose you want to deposit some money into a savings account, and let the account earn compound interest for a certain number of years. The formula for calculating the balance of the account after a specified number of years is:
-```math
+
 $$ A = P \left(1 \+ \frac{r}{n}\right)^{nt} $$
-```
+
 
 The terms in the formula are:
 - **A** is the amount of money in the account after the specified number of years.
