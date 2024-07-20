@@ -24,7 +24,7 @@ print('Name:', name)
 print('Age:', age)
 ```
 
-  ![if statement image](./img/if.png)
+  ![if statement image](../img/if.png)
 - In the flowchart, the diamond symbol indicates some condition that must be tested. 
 - In this case, we are determining whether the condition Cold outside is true or false. 
 - If this condition is true, the action Wear a coat is performed. If the condition is false, the action is skipped.
