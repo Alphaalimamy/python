@@ -759,7 +759,7 @@ Write a program that calculates the total amount of a meal purchased at a restau
 ## 9. Celsius to Fahrenheit Temperature Converter
 Write a program that converts Celsius temperatures to Fahrenheit temperatures. The formula is as follows:
 ```math
-$$F = \frac{9}{5}C + 32$$
+F = \frac{9}{5}C + 32
 ```
 The program should ask the user to enter a temperature in Celsius, then display the temperature converted to Fahrenheit.
 
@@ -816,7 +816,7 @@ Once the input data has been entered, the program should calculate and display t
 ### 14. Compound Interest
 When a bank account pays compound interest, it pays interest not only on the principal amount that was deposited into the account, but also on the interest that has accumulated over time. Suppose you want to deposit some money into a savings account, and let the account earn compound interest for a certain number of years. The formula for calculating the balance of the account after a specified number of years is:
 ```math
-$$A = P(1 \+ \frac{r}{n}\right)^{nt}$$
+A = P(1 \+ \frac{r}{n}\right)^{nt}
 ```
 
 The terms in the formula are:
