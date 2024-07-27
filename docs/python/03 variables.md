@@ -643,7 +643,9 @@ Seconds: 30.0
 
 Suppose you want to deposit a certain amount of money into a savings account and leave it alone to draw interest for the next 10 years. At the end of 10 years, you would like to have $10,000 in the account. How much do you need to deposit today to make that happen? You can use the following formula to find out:
 
+```math
 $$\text{P} = \frac{F}{(1 + r)^n} $$
+```
 
 The terms in the formula are as follows:
 - **P** is the present value, or the amount that you need to deposit today.
@@ -816,7 +818,7 @@ Once the input data has been entered, the program should calculate and display t
 ### 14. Compound Interest
 When a bank account pays compound interest, it pays interest not only on the principal amount that was deposited into the account, but also on the interest that has accumulated over time. Suppose you want to deposit some money into a savings account, and let the account earn compound interest for a certain number of years. The formula for calculating the balance of the account after a specified number of years is:
 ```math
-$$A = P\times (1 + \frac{r}{n})^{nt}$$
+$$A = P(1 + \frac{r}{n})^{nt}$$
 ```
 
 The terms in the formula are:
