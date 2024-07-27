@@ -138,7 +138,7 @@ average = (test1 + test2 + test3) / 3
 print(f'The average score is {average}.')
 
 ### If the average is a high score, congratulate the user.
-if average >= HIGH_SCORE:
+if average \>= HIGH_SCORE:
     print('Congratulations!')
     print('That is a great average!')
 
