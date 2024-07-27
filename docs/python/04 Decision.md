@@ -50,19 +50,20 @@ print('Age:', age)
 
 | Operator | Meaning                  |
 |----------|--------------------------|
-| >        | Greater than             |
-| <        | Less than                |
-| >=       | Greater than or equal to |
-| <=       | Less than or equal to    |
+| &gt;      | Greater than             |
+| &lt;      | Less than                |
+| &gt;=     | Greater than or equal to |
+| &lt;=     | Less than or equal to    |
 | ==       | Equal to                 |
 | !=       | Not equal to             |
 
+
 | Expression | Meaning                      |
 |------------|------------------------------|
-| x > y      | Is x greater than y?         |
-| x < y      | Is x less than y?            |
-| x >= y     | Is x greater than or equal to y? |
-| x <= y     | Is x less than or equal to y?    |
+| x \> y      | Is x greater than y?         |
+| x \< y      | Is x less than y?            |
+| x \>= y     | Is x greater than or equal to y? |
+| x \<= y     | Is x less than or equal to y?    |
 | x == y     | Is x equal to y?             |
 | x != y     | Is x not equal to y?         |
 
