@@ -112,7 +112,7 @@ if choice != 5:
 ## In the Spotlight:
 ### Using the if Statement
 Alpha Leigh teaches a science class and his students are required to take three tests. He wants to write a program that his students can use to calculate their average test score. He  also wants the program to congratulate the student enthusiastically if the average is greater than 95. Here is the algorithm in pseudocode:
-
+```
 - Get the first test score
 - Get the second test score
 - Get the third test score
@@ -123,10 +123,12 @@ Alpha Leigh teaches a science class and his students are required to take three 
  
 - This program gets three test scores and displays their average. It congratulates the user if the average is a high score.
 - The HIGH_SCORE named constant holds the value that is considered a high score.
+```
 
 **HIGH_SCORE = 95**
 
 ### Get the three test scores
+```python
 - test1 = int(input('Enter the score for test 1: ' ))
 - test2 = int(input('Enter the score for test 2: ' ))
 - test3 = int(input('Enter the score for test 3: ' ))
@@ -138,10 +140,10 @@ average = (test1 + test2 + test3) / 3
 print(f'The average score is {average}.')
 
 ### If the average is a high score, congratulate the user.
-if average \>= HIGH_SCORE:
+if average >= HIGH_SCORE:
     print('Congratulations!')
     print('That is a great average!')
-
+```
 ## Exercises
 1. What is a control structure?
 2. What is a decision structure?
