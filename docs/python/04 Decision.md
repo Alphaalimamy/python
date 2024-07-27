@@ -23,12 +23,11 @@ print('Here is the data you entered:')
 print('Name:', name)
 print('Age:', age)
 ```
-
-  ![if statement image](../img/if.png)
+![if statement image](../img/if.png)
 - In the flowchart, the diamond symbol indicates some condition that must be tested. 
 - In this case, we are determining whether the condition Cold outside is true or false. 
 - If this condition is true, the action Wear a coat is performed. If the condition is false, the action is skipped.
- - The action is conditionally executed because it is performed only when a certain condition is true.
+- The action is conditionally executed because it is performed only when a certain condition is true.
 - In Python, we use the if statement to write a single alternative decision structure. Here is the general format of the if statement:
  ```python 
         if condition:
