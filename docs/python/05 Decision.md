@@ -75,8 +75,8 @@ if sales \> 50000:
     bonus = 500.0
 ```
 
-- This statement uses the `\>` operator to determine whether sales is greater than 50,000. 
-- If the expression `sales \> 50000` is true, the variable bonus is assigned `500.0`. 
+- This statement uses the `>` operator to determine whether sales is greater than 50,000. 
+- If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
 - If the expression is false, however, the assignment statement is skipped. Figure below shows a flowchart for this section of code.
 ![](../img/if2.png)
 - The following example conditionally executes a block containing three statements. Figure below shows a flowchart for this section of code:
@@ -84,7 +84,7 @@ if sales \> 50000:
 
 
 ```python
-if sales \> 50000:
+if sales > 50000:
     bonus = 500.0
     commission_rate = 0.12
     print('You met your sales quota!')
@@ -324,7 +324,7 @@ CONCEPT: The logical and operator and the logical or operator allow you to conne
 |-----------------------|--------------------------------------------|
 | x \> y and a \< b     | Is x greater than y AND is a less than b? |
 | x == y or x == z      | Is x equal to y OR is x equal to z?       |
-| not (x > y)           | Is the expression x \> y NOT true?         |
+| not (x \> y)           | Is the expression x \> y NOT true?         |
 
 
 ## Compound Boolean expressions using logical operators
@@ -332,9 +332,7 @@ CONCEPT: The logical and operator and the logical or operator allow you to conne
 
 
 The and Operator
-The and operator takes two Boolean expressions as operands and creates a compound
-Boolean expression that is true only when both subexpressions are true. The following is
-an example of an if statement that uses the and operator:
+The and operator takes two Boolean expressions as operands and creates a compound Boolean expression that is true only when both subexpressions are true. The following is an example of an if statement that uses the and operator:
 
  ```
 if temperature < 20 and minutes > 12:
@@ -365,8 +363,8 @@ statement using the not operator:
 if not(temperature > 100):
     print('This is below the maximum temperature.')
 ```
-First, the expression (temperature > 100) is tested and a value of either true or false is
-the result. Then the not operator is applied to that value. If the expression (temperature > 100) is true, the not operator returns false. If the expression (temperature > 100) is false, the not operator returns true. The previous code is equivalent to asking: “Is the temperature not greater than 100?”
+First, the expression (temperature \> 100) is tested and a value of either true or false is
+the result. Then the not operator is applied to that value. If the expression (temperature \> 100) is true, the not operator returns false. If the expression (temperature > 100) is false, the not operator returns true. The previous code is equivalent to asking: “Is the temperature not greater than 100?”
 
 ```python
 # This program determines whether a bank customer
@@ -479,7 +477,7 @@ outside the range of 1 through 10, the program should display an error message. 
 Scientists measure an object’s mass in kilograms and its weight in newtons. If you know
 the amount of mass of an object in kilograms, you can calculate its weight in newtons with
 the following formula:
-$$weight = mass \times 9.8$$
+\$$weight = mass \times 9.8$$
 
 7. Write a program that asks the user to enter an object’s mass, then calculates its weight. If
 the object weighs more than 500 newtons, display a message indicating that it is too heavy.
