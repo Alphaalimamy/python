@@ -46,35 +46,37 @@ print('Age:', age)
 ## Boolean Expressions and Relational Operators
 
 - The expressions that are tested by the if statement are called Boolean expressions, named in honor of the English mathematician George Boole
-- A relational operator determines whether a specific relationship exists between two values. For example, the greater than operator (>) determines whether one value is greater than another. 
+- A relational operator determines whether a specific relationship exists between two values. For example, the greater than operator (\>) determines whether one value is greater than another. 
 - The equal to operator (==) determines whether two values are equal.
 
 | Operator | Meaning                  |
 |----------|--------------------------|
-| >        | Greater than             |
-| <        | Less than                |
-| >=       | Greater than or equal to |
-| <=       | Less than or equal to    |
+| &gt;      | Greater than             |
+| &lt;      | Less than                |
+| &gt;=     | Greater than or equal to |
+| &lt;=     | Less than or equal to    |
 | ==       | Equal to                 |
 | !=       | Not equal to             |
+           |
 
-| Expression | Meaning                      |
-|------------|------------------------------|
-| x > y      | Is x greater than y?         |
-| x < y      | Is x less than y?            |
-| x >= y     | Is x greater than or equal to y? |
-| x <= y     | Is x less than or equal to y?    |
-| x == y     | Is x equal to y?             |
-| x != y     | Is x not equal to y?         |
+| Expression  | Meaning                               |
+|-------------|---------------------------------------|
+| x \> y      | Is x greater than y?                  |
+| x \< y      | Is x less than y?                     |
+| x \>= y     | Is x greater than or equal to y?      |
+| x \<= y     | Is x less than or equal to y?         |
+| x == y      | Is x equal to y?                      |
+| x !=
+
 
 ```python
 sales = int(input(f'Enter sales amount: '))
-if sales > 50000:
+if sales \> 50000:
     bonus = 500.0
 ```
 
-- This statement uses the `>` operator to determine whether sales is greater than 50,000. 
-- If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
+- This statement uses the `\>` operator to determine whether sales is greater than 50,000. 
+- If the expression `sales \> 50000` is true, the variable bonus is assigned `500.0`. 
 - If the expression is false, however, the assignment statement is skipped. Figure below shows a flowchart for this section of code.
 ![](../img/if2.png)
 - The following example conditionally executes a block containing three statements. Figure below shows a flowchart for this section of code:
@@ -320,9 +322,9 @@ CONCEPT: The logical and operator and the logical or operator allow you to conne
 
 | Expression            | Meaning                                    |
 |-----------------------|--------------------------------------------|
-| x > y and a < b       | Is x greater than y AND is a less than b? |
+| x \> y and a \< b     | Is x greater than y AND is a less than b? |
 | x == y or x == z      | Is x equal to y OR is x equal to z?       |
-| not (x > y)           | Is the expression x > y NOT true?         |
+| not (x > y)           | Is the expression x \> y NOT true?         |
 
 
 ## Compound Boolean expressions using logical operators
@@ -426,11 +428,11 @@ whether the result of such a combination is true or false.
 
 | Condition                   | Result (circle T or F) |
 |-----------------------------|-------------------------|
-| a == 4 or b > 2             | T                       |
-| 6 <= c and a > 3            | F                       |
+| a == 4 or b \> 2             | T                       |
+| 6 \<= c and a \> 3            | F                       |
 | 1 != b and c != 3           | F                       |
-| a >= −1 or a <= b           | T                       |
-| not (a > 2)                 | T                       |
+| a \>= −1 or a \<= b           | T                       |
+| not (a \> 2)                 | T                       |
 
 
 4. Explain how short-circuit evaluation works with the and and or operators.
