@@ -36,7 +36,7 @@ print('Age:', age)
             statement
             etc.
   ```
-  ![](../img/if1.png)
+  ![if_else](../img/if1.png)
 - For simplicity, we will refer to the first line as the if clause. The if clause begins with the word if, followed by a condition, which is an expression that will be evaluated as either true or false. A colon appears after the condition. Beginning at the next line is a block of statements.
  - A `block ` is simply a set of statements that belong together as a group. Notice in the general format that all of the statements in the block are indented.
   - This indentation is required because the Python interpreter uses it to tell where the block begins and ends.
@@ -76,9 +76,9 @@ if sales > 50000:
 - This statement uses the `>` operator to determine whether sales is greater than 50,000. 
 - If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
 - If the expression is false, however, the assignment statement is skipped. Figure below shows a flowchart for this section of code.
-![](../img/if2.png)
+![nested_if](../img/if2.png)
 - The following example conditionally executes a block containing three statements. Figure below shows a flowchart for this section of code:
-![](../img/if3.png)
+![another_if](../img/if3.png)
 
 
 ```python
@@ -154,7 +154,7 @@ An if-else statement will execute one block of statements if its condition is tr
 ## Dual Alternative
 - Dual alternative decision structure, two possible paths of execution—one path is taken if a condition
 is true, and the other path is taken if the condition is false
-![](../img/if_else.png)
+![if_else](../img/if_else.png)
 
 
 In code, we write a dual alternative decision structure as an if-else statement. Here is the
@@ -290,7 +290,7 @@ else:
 ### Nested Decision Structures and the if-elif-else Statement
 CONCEPT: To test more than one condition, a decision structure can be nested inside another decision structure.
 
-![](../img/nested_if.png)
+![nested](../img/nested_if.png)
 If we follow the flow of execution, we see that the condition salary >= 30000 is tested. If this condition is false, there is no need to perform further tests; we know the customer does not qualify for the loan. If the condition is true, however, we need to test the second condition. This is done with a nested decision structure that tests the condition years_on_job `>= 2`. If this condition is true, then the customer qualifies for the loan. If this condition is false, then the customer does not qualify
 
 ```python
