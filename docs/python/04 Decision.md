@@ -180,6 +180,7 @@ Welcome: Fatima
 - This statement uses the `>` operator to determine whether sales is greater than 50,000. 
 - If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
 - If the expression is false, however, the assignment statement is skipped. Figure below shows a flowchart for this section of code.
+  
 ![](../img/if2.png)
 
 ### Example 11
