@@ -74,7 +74,7 @@ sales = int(input(f'Enter sales amount: '))
 if sales > 50000:
     bonus = 500.0
 ```
-
+### Exercises
 ```python
 x = 10
 y = 5
