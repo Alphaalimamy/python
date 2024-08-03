@@ -185,6 +185,7 @@ Welcome: Fatima
 
 ### Example 11
 - The following example conditionally executes a block containing three statements. Figure below shows a flowchart for this section of code:
+  
 ![](../img/if3.png)
 
 
@@ -219,6 +220,7 @@ if choice != 5:
 ## In the Spotlight:
 ### Using the if Statement
 Alpha Leigh teaches a science class and his students are required to take three tests. He wants to write a program that his students can use to calculate their average test score. He  also wants the program to congratulate the student enthusiastically if the average is greater than 95. Here is the algorithm in pseudocode:
+
 ```
 - Get the first test score
 - Get the second test score
