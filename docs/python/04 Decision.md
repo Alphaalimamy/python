@@ -216,7 +216,9 @@ choice = int(input('Enter your choice: '))
 if choice != 5:
     print('I love Rugiatu')
 ```
-```I love Rugiatu```
+```
+I love Rugiatu
+```
 
 ## In the Spotlight:
 ### Using the if Statement
