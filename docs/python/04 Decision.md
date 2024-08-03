@@ -23,6 +23,19 @@ age = 12
 print(f"My name is:{name}")
 print(f"My age is: {age}")
 ```
+Output 
+```
+My name is: Alpha
+My age is: 12
+```
+# Example 2
+```python
+name = input("Enter name: ")
+age = int(input("Enter your age: "))
+```
+
+print(f"My name is: {name}")
+print(f"My age is: {age}")
 ```python
 name = input('What is your name? ')
 age = int(input('What is your age? '))
