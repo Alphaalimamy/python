@@ -74,7 +74,7 @@ if isColdOutside:
 ## Exercise
 - Try changing the `isColdOutside` to **False**
 ```
-isColdOutside = False  # False
+isColdOutside = True
 
 if isColdOutside:
     print("Wear a coat")
