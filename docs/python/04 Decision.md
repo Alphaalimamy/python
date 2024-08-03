@@ -221,21 +221,15 @@ Alpha Leigh teaches a science class and his students are required to take three 
 
 ### Get the three test scores
 ```python
-HIGH_SCORE = 95
-- test1 = int(input('Enter the score for test 1: ' ))
-- test2 = int(input('Enter the score for test 2: ' ))
-- test3 = int(input('Enter the score for test 3: ' ))
+HIGHEST_SCORE = 95
+test_one = float(input("Enter score 1: "))
+test_two = float(input("Enter score 2: "))
+test_three = float(input("Enter score 3: "))
 
-### Calculate the average test score.
-average = (test1 + test2 + test3) / 3
+average = (test_one + test_two + test_three) / 3
 
-### Print the average.
-print(f'The average score is {average}.')
-
-### If the average is a high score, congratulate the user.
-if average >= HIGH_SCORE:
-    print('Congratulations!')
-    print('That is a great average!')
+if average >= HIGHEST_SCORE:
+    print(f'Congratulations! Your average is: {average:.2f}')
 ```
 ## Exercises
 1. What is a control structure?
