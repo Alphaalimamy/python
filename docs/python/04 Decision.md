@@ -149,6 +149,24 @@ if choice != 5:
     print('I love Rugiatu')
 ```
 
+## Exercise 5
+```python
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+# <, > , >=, <=
+if age >= 18:
+    print(f"Welcome: {name}")
+```
+Output
+```
+Sample name = Fatima
+age = 20
+
+Enter your name: Fatima
+Enter your age: 20
+Welcome: Fatima
+```
 - This statement uses the `>` operator to determine whether sales is greater than 50,000. 
 - If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
 - If the expression is false, however, the assignment statement is skipped. Figure below shows a flowchart for this section of code.
