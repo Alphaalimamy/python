@@ -112,15 +112,23 @@ if isColdOutside:
 x = 10
 y = 5
 
-# print(x > y)
+print(x > y)  # True
+print(x < y)  # False
+print(x >= y)  # True
+print(x <= y)  # False
+print(x == y)  # False
+print(x != y)  # True
 
-x = y = 4
-# print(x > y)  # False
-# print(x < y)  # False
-# print(x >= y)  # True
-# print(x <= y)  # True
 ```
-
+Output
+```
+True
+False
+True
+False
+False
+True
+```
 ### Example 2:
 ```python
 age = 18
