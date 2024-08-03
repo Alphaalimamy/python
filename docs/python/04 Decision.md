@@ -106,12 +106,8 @@ if isColdOutside:
 | x !=
 
 
-```python
-sales = int(input(f'Enter sales amount: '))
-if sales > 50000:
-    bonus = 500.0
-```
-### Exercises
+
+### Example 1
 ```python
 x = 10
 y = 5
@@ -123,14 +119,26 @@ x = y = 4
 # print(x < y)  # False
 # print(x >= y)  # True
 # print(x <= y)  # True
+```
+
+### Example 2:
+```python
 age = 18
 if age >= 18:
     print("Welcome")
+```
 
+## Example 3:
+```python
+sales = int(input(f'Enter sales amount: '))
+if sales > 50000:
+    bonus = 500.0
+```
+## Example 4:
+```python
 choice = int(input('Enter your choice: '))
 if choice != 5:
     print('I love Rugiatu')
-
 ```
 
 - This statement uses the `>` operator to determine whether sales is greater than 50,000. 
