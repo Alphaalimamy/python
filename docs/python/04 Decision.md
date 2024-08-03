@@ -176,6 +176,7 @@ Enter your name: Fatima
 Enter your age: 20
 Welcome: Fatima
 ```
+
 ### Example 10
 - This statement uses the `>` operator to determine whether sales is greater than 50,000. 
 - If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
