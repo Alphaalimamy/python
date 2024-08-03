@@ -217,10 +217,11 @@ Alpha Leigh teaches a science class and his students are required to take three 
 - The HIGH_SCORE named constant holds the value that is considered a high score.
 ```
 
-**HIGH_SCORE = 95**
+
 
 ### Get the three test scores
 ```python
+HIGH_SCORE = 95
 - test1 = int(input('Enter the score for test 1: ' ))
 - test2 = int(input('Enter the score for test 2: ' ))
 - test3 = int(input('Enter the score for test 3: ' ))
