@@ -17,6 +17,7 @@ A  `control structure` is a logical design that controls the order in which a se
  
 A `sequence structure` is a set of statements that execute in the order in which they appear. For example, the following code is a sequence structure because the statements execute from top to bottom:
 
+### Example 1
 ```python
 name = "Alpha"
 age = 12
@@ -30,7 +31,7 @@ My name is: Alpha
 My age is: 12
 ```
 
-# Example 2
+### Example 2
 ```python
 userName = input("Enter name: ")
 userAge = int(input("Enter your age: "))
@@ -40,6 +41,7 @@ print(f"My name is: {userName}")
 print(f"My age is: {userAge}")
 ```
 
+### Example 3
 ```python
 studentName = input('What is your name? ')
 studentAge = int(input('What is your age? '))
@@ -69,6 +71,7 @@ print('Age:', studentAge)
 - When the if statement executes, the condition is tested. If the condition is true, the statements that appear in the block following the if clause are executed. 
 - If the condition is false, the statements in the block are skipped.
 
+### Example 4
 ```python
 isColdOutside = True 
 
@@ -77,7 +80,7 @@ if isColdOutside:
     print("Wear a hat")
 ```
 
-## Exercise
+## Exercise 1
 - Change the value of `isColdOutside` to **False**
 ```
 isColdOutside = True
@@ -113,7 +116,7 @@ if isColdOutside:
 
 
 
-### Example 1
+### Example 5
 ```python
 x = 10
 y = 5
@@ -135,27 +138,27 @@ False
 False
 True
 ```
-### Example 2:
+### Example 6:
 ```python
 age = 18
 if age >= 18:
     print("Welcome")
 ```
 
-## Example 3:
+## Example 7:
 ```python
 sales = int(input(f'Enter sales amount: '))
 if sales > 50000:
     bonus = 500.0
 ```
-### Example 4:
+### Example 8:
 ```python
 choice = int(input('Enter your choice: '))
 if choice != 5:
     print('I love Rugiatu')
 ```
 
-### Example 5
+### Example 9
 ```python
 name = input("Enter your name: ")
 age = int(input("Enter your age: "))
@@ -173,13 +176,13 @@ Enter your name: Fatima
 Enter your age: 20
 Welcome: Fatima
 ```
-### Example 6
+### Example 10
 - This statement uses the `>` operator to determine whether sales is greater than 50,000. 
 - If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
 - If the expression is false, however, the assignment statement is skipped. Figure below shows a flowchart for this section of code.
 ![](../img/if2.png)
 
-### Example 8
+### Example 11
 - The following example conditionally executes a block containing three statements. Figure below shows a flowchart for this section of code:
 ![](../img/if3.png)
 
@@ -191,7 +194,7 @@ if sales > 50000:
     print('You met your sales quota!')
 ```
 
-### Example 9
+### Example 12
 The following code uses the `== ` operator to determine whether two values are equal. The
 expression `balance == 0` will be true if the balance variable is assigned 0. Otherwise, the expression will be false.
 
@@ -202,7 +205,7 @@ if balance == 0:
     # be executed only if balance is
     # equal to 0.
 ```
-### Example 10
+### Example 13
 The following code uses the != operator to determine whether two values are not equal. The expression choice != 5 will be true if the choice variable does not reference the value 5. Otherwise, the expression will be false.
 
 ```python
@@ -227,8 +230,6 @@ Alpha Leigh teaches a science class and his students are required to take three 
 - This program gets three test scores and displays their average. It congratulates the user if the average is a high score.
 - The HIGH_SCORE named constant holds the value that is considered a high score.
 ```
-
-
 
 ### Get the three test scores
 ```python
