@@ -71,7 +71,7 @@ print('Age:', age)
 
 ```python
 sales = int(input(f'Enter sales amount: '))
-if sales \> 50000:
+if sales > 50000:
     bonus = 500.0
 ```
 
