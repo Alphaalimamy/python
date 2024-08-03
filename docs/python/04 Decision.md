@@ -43,6 +43,8 @@ print(f"My age is: {userAge}")
 ```python
 studentName = input('What is your name? ')
 studentAge = int(input('What is your age? '))
+```
+```
 print('Here is the data you entered:')
 print('Name:', studentName)
 print('Age:', studentAge)
@@ -76,7 +78,7 @@ if isColdOutside:
 ```
 
 ## Exercise
-- Try changing the `isColdOutside` to **False**
+- Change the value of `isColdOutside` to **False**
 ```
 isColdOutside = True
 
