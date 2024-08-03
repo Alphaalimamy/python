@@ -75,6 +75,27 @@ if sales > 50000:
     bonus = 500.0
 ```
 
+```python
+x = 10
+y = 5
+
+# print(x > y)
+
+x = y = 4
+# print(x > y)  # False
+# print(x < y)  # False
+# print(x >= y)  # True
+# print(x <= y)  # True
+age = 18
+if age >= 18:
+    print("Welcome")
+
+choice = int(input('Enter your choice: '))
+if choice != 5:
+    print('I love Rugiatu')
+
+```
+
 - This statement uses the `>` operator to determine whether sales is greater than 50,000. 
 - If the expression `sales > 50000` is true, the variable bonus is assigned `500.0`. 
 - If the expression is false, however, the assignment statement is skipped. Figure below shows a flowchart for this section of code.
