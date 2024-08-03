@@ -13,7 +13,7 @@
 ### The if Statement
 The `if statement` is used to create a decision structure, which allows a program to have more than one path of execution. The if statement causes one or more statements to execute only when a Boolean expression is true.
 
-A  `control structure` is a logical design that controls the order in which a set of statements execute. So far in this book, we have used only the simplest type of control structure: the sequence structure.
+A  `control structure` is a logical design that controls the order in which a set of statements execute. So far in this note, we have used only the simplest type of control structure: the sequence structure.
  
 A `sequence structure` is a set of statements that execute in the order in which they appear. For example, the following code is a sequence structure because the statements execute from top to bottom:
 
