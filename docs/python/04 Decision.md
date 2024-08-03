@@ -63,6 +63,23 @@ print('Age:', age)
 - When the if statement executes, the condition is tested. If the condition is true, the statements that appear in the block following the if clause are executed. 
 - If the condition is false, the statements in the block are skipped.
 
+```python
+isColdOutside = True 
+
+if isColdOutside:
+    print("Wear a coat")
+    print("Wear a hat")
+```
+
+## Exercise
+- Try changing the `isColdOutside` to **False**
+```
+isColdOutside = False  # False
+
+if isColdOutside:
+    print("Wear a coat")
+    print("Wear a hat")
+```
 ## Boolean Expressions and Relational Operators
 
 - The expressions that are tested by the if statement are called Boolean expressions, named in honor of the English mathematician George Boole
