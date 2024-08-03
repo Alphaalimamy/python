@@ -16,6 +16,13 @@ The `if statement` is used to create a decision structure, which allows a progra
 A  `control structure` is a logical design that controls the order in which a set of statements execute. So far in this book, we have used only the simplest type of control structure: the sequence structure.
  
 A `sequence structure` is a set of statements that execute in the order in which they appear. For example, the following code is a sequence structure because the statements execute from top to bottom:
+
+```python
+name = "Alpha"
+age = 12
+print(f"My name is:{name}")
+print(f"My age is: {age}")
+```
 ```python
 name = input('What is your name? ')
 age = int(input('What is your age? '))
