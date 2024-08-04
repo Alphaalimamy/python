@@ -278,6 +278,82 @@ general format of the if-else statement:
         statement
         etc.
 ```
+### Example 1:
+Check if a number is positive or negative
+
+```python
+number = 10
+if number > 0:
+    print("The number is positive.")
+else:
+    print("The number is negative.")
+
+```
+### Example 2:
+Check if a number is even or odd
+```python
+number = 7
+if number % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+
+```
+
+### Example 3:
+Check if a person is eligible to vote
+```python
+age = 18
+if age >= 18:
+    print("Eligible to vote.")
+else:
+    print("Not eligible to vote.")
+```
+
+### Example 4:
+
+```python
+score = 85
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+elif score >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+```
+
+### Example 4:
+# Grade Classification Based on Score
+
+AI Lab has implemented a new grading system to classify student grades based on their scores in a course. The grading criteria are as follows:
+
+| Grade | Score Range |
+|-------|-------------|
+| A     | 90-100      |
+| B     | 80-89       |
+| C     | 70-79       |
+| D     | 60-69       |
+| F     | Below 60    |
+
+```python
+grade = 80
+if grade >= 90:
+    print("A")
+elif grade >= 80:
+    print("B")
+elif grade >= 70:
+    print("C")
+elif grade >= 60:
+    print("D")
+else:
+    print(f"{grade} is below 60")
+
+```
 ### In the Spotlight:
 ### Using the if-else Statement
 Alpha owns an auto repair business and has several employees. If any employee works over 40 hours in a week, he pays them 1.5 times their regular hourly pay rate for all hours over 40. He has asked you to design a simple payroll program that calculates an employee’s gross pay, including any overtime wages. You design the following algorithm:
