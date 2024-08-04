@@ -354,6 +354,23 @@ else:
     print(f"{grade} is below 60")
 
 ```
+### Example 5: 
+In a geometry class at Central South University, students are learning about different types of triangles. The professor has given an assignment where students need to determine the type of triangle formed by three given side lengths. The types of triangles to classify are:
+
+- Equilateral Triangle: All three sides are equal.
+- Isosceles Triangle: Exactly two sides are equal.
+- Scalene Triangle: All three sides are different.
+- Not a Triangle: The given side lengths do not satisfy the triangle inequality theorem (i.e., the sum of any two sides must be greater than the third side).
+
+```python
+a, b, c = 5, 5, 8
+if a == b == c:
+    print("Equilateral triangle.")
+elif a == b or b == c or a == c:
+    print("Isosceles triangle.")
+else:
+    print("Scalene triangle.")
+```
 ### In the Spotlight:
 ### Using the if-else Statement
 Alpha owns an auto repair business and has several employees. If any employee works over 40 hours in a week, he pays them 1.5 times their regular hourly pay rate for all hours over 40. He has asked you to design a simple payroll program that calculates an employee’s gross pay, including any overtime wages. You design the following algorithm:
