@@ -355,15 +355,20 @@ else:
     print("Scalene triangle.")
 ```
 
-### Example 6:
+### Example 6: Loan Approval Based on Financial Criteria
 
-Word Problem: Loan Approval Based on Financial Criteria
 Scenario:
+
 Rugiatu is looking to buy a new home and needs to secure a loan from the bank. The bank has set specific criteria for approving loans, which Rugiatu must meet to get her loan approved. The criteria are as follows:
 
-Rugiatu’s annual income must be greater than Le50,000. Her credit score must be higher than 650. She must have a down payment of at least Le20,000. If Rugiatu meets all these criteria, her loan will be approved. If she meets the income and credit score criteria but not the down payment requirement, her loan will be conditionally approved, and she will need to increase her down payment. If she fails to meet either the income or credit score criteria, her loan will be denied, and the bank will provide feedback on the reasons for denial.
+- Rugiatu’s annual income must be greater than Le50,000.
+- Her credit score must be higher than 650. She must have a down payment of at least Le20,000.
+- If Rugiatu meets all these criteria, her loan will be approved.
+- If she meets the income and credit score criteria but not the down payment requirement, her loan will be conditionally approved, and she will need to increase her down payment.
+- If she fails to meet either the income or credit score criteria, her loan will be denied, and the bank will provide feedback on the reasons for denial.
 
 Problem:
+
 Write a program that determines whether Rugiatu’s loan is approved, conditionally approved, or denied based on her financial details: an income of Le75,000, a credit score of 720, and a down payment of Le20,000.
 
 ```python
