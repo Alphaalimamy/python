@@ -383,6 +383,134 @@ else:
     print("Loan denied: insufficient income.")
 
 ```
+
+### Example 7:
+Car Loan Approval
+Scenario:
+Alpha is applying for a car loan. The bank has set the following criteria for loan approval:
+- Annual income must be greater than $40,000.
+- Credit score must be higher than 600.
+- Down payment must be at least $5,000.
+Problem:
+Write a program to determine if Alpha's car loan is approved, conditionally approved, or denied based on his financial details: an income of Le45,000, a credit score of 650, and a down payment of Le4,000.
+
+```python
+income = 45000
+credit_score = 650
+down_payment = 4000
+
+if income > 40000:
+    if credit_score > 600:
+        if down_payment >= 5000:
+            print("Car loan approved.")
+        else:
+            print("Car loan conditionally approved: increase down payment.")
+    else:
+        print("Car loan denied: improve credit score.")
+else:
+    print("Car loan denied: insufficient income.")
+```
+### Example 8: Personal Loan Approval
+Scenario:
+Rugiatu is applying for a personal loan. The bank's criteria are:
+- Annual income must exceed Le30,000.
+- Credit score must be over 700.
+- Down payment must be at least Le2,000.
+Problem:
+Write a program to determine if Rugiatu’s personal loan is approved, conditionally approved, or denied based on her financial details: an income of Le32,000, a credit score of 710, and a down payment of Le1,500.
+
+```python
+income = 32000
+credit_score = 710
+down_payment = 1500
+
+if income > 30000:
+    if credit_score > 700:
+        if down_payment >= 2000:
+            print("Personal loan approved.")
+        else:
+            print("Personal loan conditionally approved: increase down payment.")
+    else:
+        print("Personal loan denied: improve credit score.")
+else:
+    print("Personal loan denied: insufficient income.")
+
+```
+### Example 9: Student Loan Approval
+Scenario:
+Musa is seeking a student loan. The criteria are: Annual income of the co-signer must be more than Le25,000.
+Co-signer's credit score must be higher than 650. The student must provide a scholarship or grant of at least Le1,000.
+Problem:
+Write a program to determine if Musa's student loan is approved, conditionally approved, or denied based on the co-signer’s income of Le27,000, a credit score of 660, and a scholarship of $900.
+
+```python
+income = 27000
+credit_score = 660
+scholarship = 900
+
+if income > 25000:
+    if credit_score > 650:
+        if scholarship >= 1000:
+            print("Student loan approved.")
+        else:
+            print("Student loan conditionally approved: increase scholarship or grant.")
+    else:
+        print("Student loan denied: improve credit score.")
+else:
+    print("Student loan denied: insufficient income.")
+
+```
+### Example 10:
+Home Equity Loan Approval
+Scenario:
+Adama wants to secure a home equity loan. The bank's criteria are:
+Annual income must be over Le60,000. Credit score must be higher than 700. Home equity value must be at least Le50,000.
+Problem:
+Write a program to determine if Adama’s home equity loan is approved, conditionally approved, or denied based on her income of Le65,000, a credit score of 710, and a home equity value of Le45,000.
+
+```python
+income = 65000
+credit_score = 710
+home_equity = 45000
+
+if income > 60000:
+    if credit_score > 700:
+        if home_equity >= 50000:
+            print("Home equity loan approved.")
+        else:
+            print("Home equity loan conditionally approved: increase home equity value.")
+    else:
+        print("Home equity loan denied: improve credit score.")
+else:
+    print("Home equity loan denied: insufficient income.")
+```
+
+### Example 10:
+Business Loan Approval
+Scenario:
+Fatima is applying for a business loan. The criteria are:
+Annual revenue must be greater than $100,000. Business credit score must be higher than 700. The company must have assets worth at least Le20,000.
+Problem:
+Write a program to determine if Fatima’s business loan is approved, conditionally approved, or denied based on her revenue of Le120,000, a business credit score of 720, and assets worth Le15,000.
+
+```python
+
+revenue = 120000
+business_credit_score = 720
+assets = 15000
+
+if revenue > 100000:
+    if business_credit_score > 700:
+        if assets >= 20000:
+            print("Business loan approved.")
+        else:
+            print("Business loan conditionally approved: increase company assets.")
+    else:
+        print("Business loan denied: improve business credit score.")
+else:
+    print("Business loan denied: insufficient revenue.")
+
+```
 ### In the Spotlight:
 ### Using the if-else Statement
 Alpha owns an auto repair business and has several employees. If any employee works over 40 hours in a week, he pays them 1.5 times their regular hourly pay rate for all hours over 40. He has asked you to design a simple payroll program that calculates an employee’s gross pay, including any overtime wages. You design the following algorithm:
