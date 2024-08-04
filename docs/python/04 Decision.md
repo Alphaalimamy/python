@@ -384,15 +384,17 @@ else:
 
 ```
 
-### Example 7:
-Car Loan Approval
+### Example 7: Car Loan Approval
 Scenario:
+
 Alpha is applying for a car loan. The bank has set the following criteria for loan approval:
-- Annual income must be greater than $40,000.
-- Credit score must be higher than 600.
-- Down payment must be at least $5,000.
+- Annual income must be greater than Le40,000.
+- Credit score must be higher than LLe600.
+- Down payment must be at least Le5,000.
+  
 Problem:
-Write a program to determine if Alpha's car loan is approved, conditionally approved, or denied based on his financial details: an income of Le45,000, a credit score of 650, and a down payment of Le4,000.
+
+Write a program to determine if Alpha's car loan is approved, conditionally approved, or denied based on his financial details: an income of Le45,000, a credit score of Le650, and a down payment of Le4,000.
 
 ```python
 income = 45000
@@ -412,11 +414,14 @@ else:
 ```
 ### Example 8: Personal Loan Approval
 Scenario:
+
 Rugiatu is applying for a personal loan. The bank's criteria are:
 - Annual income must exceed Le30,000.
 - Credit score must be over 700.
 - Down payment must be at least Le2,000.
+  
 Problem:
+
 Write a program to determine if Rugiatu’s personal loan is approved, conditionally approved, or denied based on her financial details: an income of Le32,000, a credit score of 710, and a down payment of Le1,500.
 
 ```python
@@ -438,9 +443,12 @@ else:
 ```
 ### Example 9: Student Loan Approval
 Scenario:
+
 Musa is seeking a student loan. The criteria are: Annual income of the co-signer must be more than Le25,000.
 Co-signer's credit score must be higher than 650. The student must provide a scholarship or grant of at least Le1,000.
+
 Problem:
+
 Write a program to determine if Musa's student loan is approved, conditionally approved, or denied based on the co-signer’s income of Le27,000, a credit score of 660, and a scholarship of $900.
 
 ```python
@@ -460,12 +468,14 @@ else:
     print("Student loan denied: insufficient income.")
 
 ```
-### Example 10:
-Home Equity Loan Approval
+### Example 10: Home Equity Loan Approval
 Scenario:
+
 Adama wants to secure a home equity loan. The bank's criteria are:
 Annual income must be over Le60,000. Credit score must be higher than 700. Home equity value must be at least Le50,000.
+
 Problem:
+
 Write a program to determine if Adama’s home equity loan is approved, conditionally approved, or denied based on her income of Le65,000, a credit score of 710, and a home equity value of Le45,000.
 
 ```python
@@ -485,12 +495,14 @@ else:
     print("Home equity loan denied: insufficient income.")
 ```
 
-### Example 10:
-Business Loan Approval
+### Example 10: Business Loan Approval
 Scenario:
+
 Fatima is applying for a business loan. The criteria are:
-Annual revenue must be greater than $100,000. Business credit score must be higher than 700. The company must have assets worth at least Le20,000.
+Annual revenue must be greater than Le100,000. Business credit score must be higher than 700. The company must have assets worth at least Le20,000.
+
 Problem:
+
 Write a program to determine if Fatima’s business loan is approved, conditionally approved, or denied based on her revenue of Le120,000, a business credit score of 720, and assets worth Le15,000.
 
 ```python
