@@ -311,23 +311,6 @@ else:
 ```
 
 ### Example 4:
-
-```python
-score = 85
-if score >= 90:
-    print("Grade: A")
-elif score >= 80:
-    print("Grade: B")
-elif score >= 70:
-    print("Grade: C")
-elif score >= 60:
-    print("Grade: D")
-else:
-    print("Grade: F")
-
-```
-
-### Example 4:
 # Grade Classification Based on Score
 
 AI Lab has implemented a new grading system to classify student grades based on their scores in a course. The grading criteria are as follows:
@@ -370,6 +353,38 @@ elif a == b or b == c or a == c:
     print("Isosceles triangle.")
 else:
     print("Scalene triangle.")
+```
+
+### Example 6:
+
+Word Problem: Loan Approval Based on Financial Criteria
+Scenario:
+Rugiatu is looking to buy a new home and needs to secure a loan from the bank. The bank has set specific criteria for approving loans, which Rugiatu must meet to get her loan approved. The criteria are as follows:
+
+Rugiatu’s annual income must be greater than $50,000.
+Her credit score must be higher than 650.
+She must have a down payment of at least $20,000.
+If Rugiatu meets all these criteria, her loan will be approved. If she meets the income and credit score criteria but not the down payment requirement, her loan will be conditionally approved, and she will need to increase her down payment. If she fails to meet either the income or credit score criteria, her loan will be denied, and the bank will provide feedback on the reasons for denial.
+
+Problem:
+Write a program that determines whether Rugiatu’s loan is approved, conditionally approved, or denied based on her financial details: an income of Le75,000, a credit score of 720, and a down payment of Le20,000.
+
+```python
+income = 75000
+credit_score = 720
+down_payment = 20000
+
+if income > 50000:
+    if credit_score > 650:
+        if down_payment >= 20000:
+            print("Loan approved.")
+        else:
+            print("Loan conditionally approved: increase down payment.")
+    else:
+        print("Loan denied: improve credit score.")
+else:
+    print("Loan denied: insufficient income.")
+
 ```
 ### In the Spotlight:
 ### Using the if-else Statement
