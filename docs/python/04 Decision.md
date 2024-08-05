@@ -389,7 +389,8 @@ else:
 
 ```
 
-### Example 7: Car Loan Approval
+##
+Example 7: Car Loan Approval
 Scenario:
 
 Alpha is applying for a car loan. The bank has set the following criteria for loan approval:
@@ -673,7 +674,24 @@ if salary >= MIN_SALARY:
 else:
     print(f'You must earn at least Le {MIN_SALARY:,.2f} per year to qualify.')
 ```
+### EXERCISES
 
+1. **FooBar**:
+   Print numbers from 1 to 50. For multiples of 4, print "Foo" instead of the number, and for multiples of 6, print "Bar". For numbers which are multiples of both 4 and 6, print "FooBar".
+
+2. **FizzBuzzBazz**:
+   Print numbers from 1 to 150. For multiples of 3, print "Fizz", for multiples of 5, print "Buzz", and for multiples of 7, print "Bazz". For numbers which are multiples of 3, 5, and 7, print "FizzBuzzBazz".
+
+3. **AlphaBeta**:
+   Print numbers from 1 to 80. For multiples of 2, print "Alpha", and for multiples of 9, print "Beta". For numbers which are multiples of both 2 and 9, print "AlphaBeta".
+
+4. **PopSnap**:
+   Print numbers from 1 to 60. For multiples of 4, print "Pop", and for multiples of 10, print "Snap". For numbers which are multiples of both 4 and 10, print "PopSnap".
+
+5. **FizzBuzzPrime**:
+   Print numbers from 1 to 100. For multiples of 3, print "Fizz", for multiples of 5, print "Buzz", and for prime numbers, print "Prime". For numbers which are multiples of both 3 and 5, print "FizzBuzz". If a number is prime and a multiple of 3 or 5, print "FizzBuzzPrime".
+
+   
 ### Logical Operators
 CONCEPT: The logical and operator and the logical or operator allow you to connect multiple Boolean expressions to create a compound expression. The logical not operator reverses the truth of a Boolean expression.
 
