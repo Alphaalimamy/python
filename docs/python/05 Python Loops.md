@@ -43,7 +43,7 @@ commission3 = sales3 * comm_rate3
 print('The commission for salesperson 3 is Le', format(commission3, ',.2f'), sep='')
 
 ```
-## Condition-Controlled and Count-Controlled Loops
+#### Condition-Controlled and Count-Controlled Loops
 
 We are going to explore two main types of loops: **condition-controlled** and **count-controlled** loops. 
 
@@ -68,7 +68,7 @@ We are going to explore two main types of loops: **condition-controlled** and **
 
 We will guide you through writing and using both types of loops to handle various programming tasks efficiently.
 
-## The `while` Loop: A Condition-Controlled Loop
+### The `while` Loop: A Condition-Controlled Loop
 
 ### Concept
 
@@ -267,3 +267,208 @@ Create a program that prompts the user to enter numbers and calculates the produ
 
 ### Exercise 10: Average Score Calculator
 Write a program that repeatedly prompts the user to enter test scores (between 0 and 100). The program should calculate and display the average score. The loop should stop when the user enters `-1`.
+
+
+## Infinite Loops
+
+An infinite loop is a loop that continues to run indefinitely because there is no condition within the loop to terminate it. This often occurs when the loop's controlling condition never becomes false. Infinite loops usually arise when a programmer forgets to update or change the variable that affects the loop's condition. You should avoid writing infinite loops unless they are intended for specific use cases, such as continuously running a server.
+
+### Example of an Infinite Loop
+
+Here is a simple example demonstrating an infinite loop:
+
+```python
+# This program demonstrates an infinite loop.
+
+# Create a variable to control the loop.
+keep_going = 'y'
+
+# Warning! Infinite loop!
+while keep_going == 'y':
+    # Get a salesperson's sales and commission rate.
+    sales = float(input('Enter the amount of sales: '))
+    comm_rate = float(input('Enter the commission rate: '))
+
+    # Calculate the commission.
+    commission = sales * comm_rate
+
+    # Display the commission.
+    print(f'The commission is ${commission:,.2f}.')
+```
+
+In this example, the loop will never stop because the variable keep_going is always set to 'y', meaning the condition keep_going == 'y' remains true indefinitely.
+
+### Examples
+Example 1: Infinite Counter
+Write a program that counts numbers starting from 1 and prints each number. Ensure that the loop runs indefinitely by not including a stopping condition.
+```python
+# Infinite Counter Example
+count = 1
+while True:
+    print(count)
+    count += 1
+```
+Example 2: Endless Input Prompt
+Create a program that continuously asks the user to enter their name and prints a greeting. The loop should run indefinitely without any way to exit.
+
+```python
+# Endless Input Prompt Example
+while True:
+    name = input('Enter your name: ')
+    print(f'Hello, {name}!')
+```
+
+Example 3: Continuous Calculator
+Develop a program that repeatedly prompts the user to enter two numbers and displays their sum. Ensure the loop never exits by not including a stopping condition.
+```python
+# Continuous Calculator Example
+while True:
+    num1 = float(input('Enter the first number: '))
+    num2 = float(input('Enter the second number: '))
+    print(f'The sum is {num1 + num2}.')
+```
+
+### Checkpoint Questions
+
+- What is a loop iteration?
+- Does the while loop test its condition before or after it performs an iteration?
+- How many times will 'Hello World' be printed in the following program?
+- What is an infinite loop?
+- What is the purpose of a loop control variable?
+- What might happen if you forget to update the loop control variable inside a while loop?
+- How can you ensure that a loop eventually stops executing?
+
+## The `for` Loop: A Count-Controlled Loop
+
+### Concept
+A count-controlled loop is used to repeat a set of actions a specific number of times. In Python, you use the `for` statement to create such loops.
+
+### How It Works
+The `for` loop iterates over a sequence of values, executing the loop’s body for each value. Here’s the basic structure:
+```python
+for variable in [value1, value2, ...]:
+    statement
+    statement
+    ...
+```
+
+- `variable`: This is the name of the loop variable that takes each value from the list one by one.
+- List: This is a sequence of values the loop iterates through.
+- Statements: These are the actions performed each time the loop runs.
+  
+Each time the for loop runs, variable is assigned a value from the list, and the statements inside the loop are executed.
+
+Example 1: Printing Numbers
+```python
+print('I will display the numbers 1 through 5.')
+for num in [1, 2, 3, 4, 5]:
+    print(num)
+```
+Example 2: Printing Odd Numbers
+```python
+print('I will display the odd numbers 1 through 9.')
+for num in [1, 3, 5, 7, 9]:
+    print(num)
+```
+Example 3: Printing Names
+```python
+print('Here are some names:')
+for name in ['Alpha', 'Rugiatu', 'Leigh']:
+    print(name)
+```
+Print Days of the Week
+```python
+print('Days of the week:')
+for day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']:
+    print(day)
+```
+
+## Sample Word Problems Using `for` Loop
+
+### Example 1: Sum of the First 10 Positive Integers
+Write a program to calculate the sum of the first 10 positive integers (1 to 10).
+
+```python
+total = 0
+for num in range(1, 11):
+    total += num
+print(f'The sum of the first 10 positive integers is {total}.')
+```
+### Example: Print Each Letter of a String
+Write a program that takes a string and prints each character of the string on a new line.
+```python
+text = "Hello"
+for char in text:
+    print(char)
+```
+
+### Using the range function
+
+#### Example: Print the Multiplication Table of a Given Number
+Write a program that prints the multiplication table of a given number n.
+
+```python
+n = 7
+for i in range(1, 11):
+    print(f'{n} x {i} = {n * i}')
+```
+
+### Understanding the `range` Function in Python
+
+Python's `range` function is a built-in tool that simplifies the creation of loops that need to execute a specific number of times. The `range` function generates an iterable, an object that contains a sequence of values you can loop through. This makes it easier to write count-controlled loops without having to manually create a list.
+
+#### Example: Using `range` in a For Loop
+
+Instead of manually creating a list of values, you can use the `range` function like this:
+
+```python
+for num in range(5):
+    print(num)
+```
+In this example, range(5) generates a sequence of integers from 0 up to (but not including) 5. This loop works similarly to the following code:
+```python
+for num in [0, 1, 2, 3, 4]:
+    print(num)
+```
+Both snippets will print the numbers 0 through 4 because the loop iterates five times.
+
+#### Real-World Example: Speed Conversion
+Imagine your friend Alpha Leigh has a Kekeh with a speedometer that shows speeds in kilometers per hour (KPH). To avoid speeding tickets in the United States, where speeds are measured in miles per hour (MPH), she asks you to write a program that converts KPH to MPH. The conversion formula is:
+`MPH = KPH * 0.6214`
+You can create a speed conversion table using the following code:
+```python
+START_SPEED = 60
+END_SPEED = 131
+INCREMENT = 10
+CONVERSION_FACTOR = 0.6214
+
+print('KPH\tMPH')
+print('--------------')
+
+for kph in range(START_SPEED, END_SPEED, INCREMENT):
+    mph = kph * CONVERSION_FACTOR
+    print(f'{kph}\t{mph:.1f}')
+```
+
+This program prints a table showing speeds from 60 KPH to 130 KPH, converted to MPH in steps of 10 KPH.
+
+### Allowing User Input to Control Loop Iterations
+Sometimes, you might want to let the user control the number of iterations in a loop. Here's an example where the user specifies the maximum value for the loop:
+
+```py
+end = int(input('How high should I go? '))
+
+print('\nNumber\tSquare')
+print('--------------')
+
+for number in range(1, end + 1):
+    square = number**2
+    print(f'{number}\t{square}')
+```
+### Example: Reversing the Order of Iteration
+You can also use range to create sequences that count downwards. Here's an example:
+
+```python
+for num in range(5, 0, -1):
+    print(num)
+```
