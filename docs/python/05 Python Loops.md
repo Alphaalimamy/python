@@ -472,3 +472,30 @@ You can also use range to create sequences that count downwards. Here's an examp
 for num in range(5, 0, -1):
     print(num)
 ```
+### Exercises
+- Rewrite the following code so it calls the range function instead of using the list [0, 1, 2, 3, 4, 5]:
+```python
+for x in [0, 1, 2, 3, 4, 5]:
+  print('I love to program!')
+```
+- What will the following code display?
+  ```python
+  for number in range(6):
+    print(number)
+  ```
+- What will the following code display?
+  ```python
+  for number in range(2, 6):
+    print(number)
+  ```
+  
+- What will the following code display?
+  ```python
+  for number in range(0, 501, 100):
+    print(number)
+  ```
+- What will the following code display?
+```python
+  for number in range(10, 5, −1):
+    print(number)
+```
