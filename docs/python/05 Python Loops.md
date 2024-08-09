@@ -499,3 +499,101 @@ for x in [0, 1, 2, 3, 4, 5]:
   for number in range(10, 5, −1):
     print(number)
 ```
+
+## Calculating a Running Total
+
+### Concept
+A **running total** is a cumulative sum of numbers that increases with each iteration of a loop. The variable that stores this running total is known as an **accumulator**.
+
+Many programming tasks require calculating the total of a series of numbers. For example, when calculating a business’s total sales for a week, the program would read daily sales as input and compute the total of those numbers.
+
+Programs that calculate the total of a series of numbers typically use two key elements:
+- A loop that reads each number in the series.
+- A variable that accumulates the total of the numbers as they are read.
+
+The loop is responsible for adding each number to the accumulator. It is crucial to initialize the accumulator to `0` before the loop starts. If the accumulator starts with any value other than `0`, the final total will be incorrect.
+
+Here’s a sample program that calculates the sum of a series of numbers entered by the user:
+
+```python
+MAX = 5  # The maximum number of inputs
+
+# Initialize an accumulator variable.
+total = 0.0
+
+# Explain the purpose of the program.
+print('This program calculates the sum of', end=' ')
+print(f'{MAX} numbers you will enter.')
+
+# Get the numbers and accumulate the total.
+for counter in range(MAX):
+    number = int(input('Enter a number: '))
+    total += number  # Using the augmented assignment operator
+
+# Display the total of the numbers.
+print(f'The total is {total}.')
+```
+Output
+```
+This program calculates the sum of 5 numbers you will enter.
+Enter a number: 1
+Enter a number: 2
+Enter a number: 3
+Enter a number: 4
+Enter a number: 5
+The total is 15.0.
+```
+In this program, the total variable acts as the accumulator. The loop reads numbers from the user and adds them to total using the augmented assignment operator +=. When the loop finishes, total contains the sum of all entered numbers.
+
+### The Augmented Assignment Operators
+Quite often, assignment statements have the same variable on both sides of the = operator. For example:
+```python
+x = 10
+x = x + 1
+print(x)
+```
+Output
+```
+11
+```
+This statement adds 1 to x and then assigns the result back to x. An alternative way to write this using an augmented assignment operator is:
+```py
+x += 1
+```
+The same concept applies to subtraction, multiplication, division, and other operations. Here’s a summary of some augmented assignment operators:
+
+| Operator | Example Usage | Equivalent To   |
+|----------|---------------|-----------------|
+| `+=`     | `x += 5`      | `x = x + 5`     |
+| `-=`     | `y -= 2`      | `y = y - 2`     |
+| `*=`     | `z *= 10`     | `z = z * 10`    |
+| `/=`     | `a /= b`      | `a = a / b`     |
+| `%=`     | `c %= 3`      | `c = c % 3`     |
+| `//=`    | `x //= 3`     | `x = x // 3`    |
+| `**=`    | `y **= 2`     | `y = y ** 2`    |
+
+
+### Exercises
+Checkpoint Exercises
+1. What is an accumulator?
+2. Should an accumulator be initialized to any specific value? Why or why not?
+3. What will the following code display?
+```python
+total = 0
+for count in range(1, 6):
+    total += count
+print(total)
+```
+4. What will the following code display?
+```python
+number1 = 10
+number2 = 5
+number1 = number1 + number2
+print(number1)
+print(number2)
+```
+5. Rewrite the following statements using augmented assignment operators:
+a) quantity = quantity + 1
+b) days_left = days_left - 5
+c) price = price * 10
+d) price = price / 2
