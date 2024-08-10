@@ -51,7 +51,7 @@ We are going to explore two main types of loops: **condition-controlled** and **
 - **Condition-Controlled Loop:**
   - It execute contineously as long as a specified condition remains true.
   - It is implemented using the `while` statement.
-  -  It is useful when the number of iterations is not known ahead of time and depends on dynamic conditions.
+  - It is useful when the number of iterations is not known ahead of time and depends on dynamic conditions.
 
 - **Count-Controlled Loop:**
     - This type of loop runs a specific number of times
@@ -90,7 +90,7 @@ while condition:
 
 ### Example Password Verification
 
-Problem: Write a program that repeatedly prompts the user to enter the correct password. The loop should end when the correct password is entered.
+Write a program that repeatedly prompts the user to enter the correct password. The loop should end when the correct password is entered.
 ```python
 correct_password = 'secure123'
 entered_password = ''
