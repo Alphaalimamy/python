@@ -1,4 +1,4 @@
-## Python Loops (Repetition Structures)
+#### Python Loops (Repetition Structures)
 
 
 ### Learning Objectives
@@ -13,7 +13,7 @@ By the end of this topic, students will:
 - Master the use of nested loops to handle complex iterative scenarios.
 
 
-## Introduction to Loops (Repetition Structures)
+### Introduction to Loops (Repetition Structures)
 
 ### Concept
 
