@@ -27,7 +27,6 @@ Imagine you need to calculate and display commissions for three salespeople. Ins
 # SALES PERSONS 1
 sales_1 = float(input("Enter the amount of sales person 1: "))
 commission_rate_1 = float(input("Enter the commission rate: "))
-
 commission = sales_1 * commission_rate_1
 print(f"The commission rate for salesperson 1: {commission:.2f}")
 
@@ -37,12 +36,11 @@ commission_rate_2 = float(input("Enter the commission rate: "))
 commission_2 = sales_2 * commission_rate_2
 print(f"The commission rate for salesperson 1: {commission_2:.2f}")
 
-# Salesperson 3
-sales3 = float(input('Enter the amount of sales for salesperson 3: '))
-comm_rate3 = float(input('Enter the commission rate: '))
-commission3 = sales3 * comm_rate3
-print('The commission for salesperson 3 is Le', format(commission3, ',.2f'), sep='')
-
+# SALES PERSONS 3
+sales_3 = float(input("Enter the amount of sales person 3: "))
+commission_rate_3 = float(input("Enter the commission rate: "))
+commission_3 = sales_3 * commission_rate_3
+print(f"The commission rate for salesperson 1: {commission_3:.2f}")
 ```
 #### Condition-Controlled and Count-Controlled Loops
 
@@ -88,9 +86,7 @@ while condition:
     # statements to execute
 ```
 
-### Examples
-### Example 1: 
-Print numbers from 1 to 10 using while loop
+### Example 1: Print numbers from 1 to 10 using while loop
 ```
 Initialization: number = 1
 Condition: number <= 10
@@ -117,10 +113,7 @@ Output
 10
 ```
 
-"""
-### Example 2: 
-Print even numbers from 1 to 10 using a while loop.
-
+### Example 2: Print even numbers from 1 to 10 using a while loop.
 ```
 STEPS:
 1. Initialise: number = 1
@@ -138,6 +131,7 @@ while number <= 10:  # Condition: number <= 10
         print(number)  # Print: print(number)
     number += 1  # Increment: number += 1
 ```
+Output
 ```
 2
 4
@@ -145,9 +139,7 @@ while number <= 10:  # Condition: number <= 10
 8
 10
 ```
-### Example 3: 
-Print the first five multiples of 3 using a while loop.
-
+### Example 3: Print the first five multiples of 3 using a while loop.
 ```
 1. Initialize: number = 1
 2. Condition: number <= 15
@@ -184,6 +176,7 @@ output
 9
 15
 ```
+### Example 4:
 You are a teacher organizing a small class activity where you need to print the numbers 1 to 5 on the board, one by one.
 You decide to use a while loop in a programming language to achieve this.
 Write a program using a while loop that will print the numbers 1 to 5.
@@ -207,12 +200,11 @@ Output
 - Print the numbers from 1 to 5 in reverse order using a while loop.
 ```
 
-### Example Password Verification
+### Example 5: Password Verification
 Write a program that repeatedly prompts the user to enter the correct password. The loop should end when the correct password is entered.
 ```python
 correct_password = 'secure123'
 entered_password = ''
-
 while entered_password != correct_password:
     entered_password = input('Enter the password: ')
     
@@ -236,7 +228,7 @@ while number != 0:
 print(f'The total sum is {total:.2f}.')
 ```
 
-### Example: Guessing Game
+### Example 6: Guessing Game
 Write a program that generates a random number between 1 and 10 and repeatedly prompts the user to guess the number until they guess correctly.
 
 ```python
@@ -247,7 +239,7 @@ while guess != number_to_guess:
     guess = int(input('Guess the number (1-10): '))
 print('Congratulations! You guessed the number.')
 ```
-### Example Age Checker
+### Example 7:  Age Checker
 Write a program that asks for the user's age and keeps asking until the user provides a valid age (a positive number).
 ```python
 age = -1
@@ -256,7 +248,7 @@ while age <= 0:
     age = int(input('Enter your age: '))
 print(f'Your age is {age}.')
 ```
-### Example: Countdown Timer
+### Example 8: Countdown Timer
 Write a program that counts down from 10 to 1 and then prints "Blast off!"
 ```python
 count = 10
@@ -265,7 +257,7 @@ while count > 0:
     count -= 1
 print('Blast off!')
 ```
-### Exercise 1: Number Sum
+### Example 9: Number Sum
 Write a program that continuously prompts the user to enter positive numbers and keeps a running total. The program should stop when the user enters `0` and then display the total sum of the entered numbers.
 
 ```python
@@ -276,11 +268,10 @@ while number != 0:
     number = float(input('Enter another number (0 to stop): '))
 print(f'The total sum is {total:.2f}.')
 ```
-### Example  Factorial Calculator
+### Example 10:  Factorial Calculator
 Write a program that calculates the factorial of a number entered by the user. The program should repeatedly prompt the user to enter a positive integer until they enter a number greater than or equal to 0, then compute and display the factorial of that number.
 
 ```python
-
 number = int(input('Enter a positive integer to calculate its factorial: '))
 factorial = 1
 while number < 0:
@@ -291,21 +282,19 @@ while number > 0:
 print(f'The factorial is {factorial}.')
 ```
 
-### Example Even Number Counter
+### Example 11: Even Number Counter
 Write a program that asks the user to enter numbers and counts how many of the entered numbers are even. The program should stop when the user enters -1.
 
 ```python
 count = 0
 number = int(input('Enter a number (-1 to stop): '))
-
 while number != -1:
     if number % 2 == 0:
         count += 1
     number = int(input('Enter another number (-1 to stop): '))
-
 print(f'The number of even numbers entered is {count}.')
 ```
-### Example: Age Group Identifier
+### Example 12: Age Group Identifier
 Write a program that continuously prompts the user to enter their age and categorizes them into different age groups: "Child" (0-12), "Teenager" (13-19), and "Adult" (20 and above). The program should stop when the user enters -1.
 ```python
 age = int(input('Enter your age (-1 to stop): '))
@@ -318,9 +307,8 @@ while age != -1:
     else:
         print('You are an Adult.')
     age = int(input('Enter your age (-1 to stop): '))
-
 ```
-### Example
+### Example 13: 
 Consider a program that calculates sales commissions repeatedly until the user decides to stop:
 ```python
 # This program calculates sales commissions.
@@ -344,7 +332,6 @@ while keep_going == 'y':
     keep_going = input('Do you want to calculate another commission (Enter y for yes): ')
 ```
 
-### EXERCISES
 ## `while` Loop Exercises
 
 ### Exercise 1: Multiples of 5
