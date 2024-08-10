@@ -24,17 +24,18 @@ A loop enables a statement or set of statements to execute repeatedly. This appr
 Imagine you need to calculate and display commissions for three salespeople. Instead of using a loop, you would write separate blocks of code for each salesperson:
 
 ```python
-# Salesperson 1
-sales1 = float(input('Enter the amount of sales for salesperson 1: '))
-comm_rate1 = float(input('Enter the commission rate: '))
-commission1 = sales1 * comm_rate1
-print('The commission for salesperson 1 is Le', format(commission1, ',.2f'), sep='')
+# SALES PERSONS 1
+sales_1 = float(input("Enter the amount of sales person 1: "))
+commission_rate_1 = float(input("Enter the commission rate: "))
 
-# Salesperson 2
-sales2 = float(input('Enter the amount of sales for salesperson 2: '))
-comm_rate2 = float(input('Enter the commission rate: '))
-commission2 = sales2 * comm_rate2
-print('The commission for salesperson 2 is Le', format(commission2, ',.2f'), sep='')
+commission = sales_1 * commission_rate_1
+print(f"The commission rate for salesperson 1: {commission:.2f}")
+
+# SALES PERSONS 2
+sales_2 = float(input("Enter the amount of sales person 2: "))
+commission_rate_2 = float(input("Enter the commission rate: "))
+commission_2 = sales_2 * commission_rate_2
+print(f"The commission rate for salesperson 1: {commission_2:.2f}")
 
 # Salesperson 3
 sales3 = float(input('Enter the amount of sales for salesperson 3: '))
