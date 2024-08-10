@@ -123,7 +123,6 @@ STEPS:
 5. Increment: number += 1
 ```
 
-"""
 ```python
 number = 1  # number = 1
 while number <= 10:  # Condition: number <= 10
