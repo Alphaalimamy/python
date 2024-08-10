@@ -88,8 +88,126 @@ while condition:
     # statements to execute
 ```
 
-### Example Password Verification
+### Examples
+### Example 1: 
+Print numbers from 1 to 10 using while loop
+```
+Initialization: number = 1
+Condition: number <= 10
+Print: print(number)
+Increment: number += 1 (number = number + 1)
+```
+```python
+number = 1
+while number <= 10:
+    print(number)
+    number += 1
+```
+Output
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
 
+"""
+### Example 2: 
+Print even numbers from 1 to 10 using a while loop.
+
+```
+STEPS:
+1. Initialise: number = 1
+2. Condition: number <= 10
+3. Check if number is divided by 2
+4. Print: print(number)
+5. Increment: number += 1
+```
+
+"""
+```python
+number = 1  # number = 1
+while number <= 10:  # Condition: number <= 10
+    if number % 2 == 0:  # Check if number is divided by 2
+        print(number)  # Print: print(number)
+    number += 1  # Increment: number += 1
+```
+```
+2
+4
+6
+8
+10
+```
+### Example 3: 
+Print the first five multiples of 3 using a while loop.
+
+```
+1. Initialize: number = 1
+2. Condition: number <= 15
+3. Check if the number is divisible by 3
+4. Print: number
+```
+Method 1
+```python
+number = 2
+while number <= 15:
+    if number % 3 == 0:
+        print(number)
+    number += 1
+```
+output
+```
+3
+6
+9
+15
+```
+
+Method 2
+```py
+number = 1
+while number <= 5:
+    print(number * 3)
+    number += 1
+```
+output
+```
+3
+6
+9
+15
+```
+You are a teacher organizing a small class activity where you need to print the numbers 1 to 5 on the board, one by one.
+You decide to use a while loop in a programming language to achieve this.
+Write a program using a while loop that will print the numbers 1 to 5.
+```python
+number = 1
+while 1 <= 5:
+    print(number)
+    number += 1
+```
+Output
+```
+1
+2
+3
+4
+5
+```
+### Exercises 
+```
+- Print all the odd numbers between 1 and 9 using a while loop.
+- Print the numbers from 1 to 5 in reverse order using a while loop.
+```
+
+### Example Password Verification
 Write a program that repeatedly prompts the user to enter the correct password. The loop should end when the correct password is entered.
 ```python
 correct_password = 'secure123'
@@ -101,48 +219,45 @@ while entered_password != correct_password:
 print('Password accepted!')
 ```
 ### Example :Sum of Numbers
-
-Problem: Write a program that prompts the user to enter numbers and adds them to a total until the user enters 0.
+Write a program that prompts the user to enter numbers and adds them to a total until the user enters 0.
+```
+Initialize: total = 0, number
+Condition: number != 0
+total: total += number
+Print: print(sum)
+Increment: number  += 1
+```
 ```python
 total = 0
 number = float(input('Enter a number (0 to stop): '))
-
 while number != 0:
     total += number
     number = float(input('Enter another number (0 to stop): '))
-
 print(f'The total sum is {total:.2f}.')
 ```
 
 ### Example: Guessing Game
-
-Problem: Write a program that generates a random number between 1 and 10 and repeatedly prompts the user to guess the number until they guess correctly.
+Write a program that generates a random number between 1 and 10 and repeatedly prompts the user to guess the number until they guess correctly.
 
 ```python
 import random
-
 number_to_guess = random.randint(1, 10)
 guess = 0
-
 while guess != number_to_guess:
     guess = int(input('Guess the number (1-10): '))
-    
 print('Congratulations! You guessed the number.')
 ```
 ### Example Age Checker
-
-Problem: Write a program that asks for the user's age and keeps asking until the user provides a valid age (a positive number).
+Write a program that asks for the user's age and keeps asking until the user provides a valid age (a positive number).
 ```python
 age = -1
 
 while age <= 0:
     age = int(input('Enter your age: '))
-    
 print(f'Your age is {age}.')
 ```
 ### Example: Countdown Timer
-
-Problem: Write a program that counts down from 10 to 1 and then prints "Blast off!"
+Write a program that counts down from 10 to 1 and then prints "Blast off!"
 ```python
 count = 10
 while count > 0:
@@ -150,18 +265,15 @@ while count > 0:
     count -= 1
 print('Blast off!')
 ```
-
 ### Exercise 1: Number Sum
 Write a program that continuously prompts the user to enter positive numbers and keeps a running total. The program should stop when the user enters `0` and then display the total sum of the entered numbers.
 
 ```python
 total = 0
 number = float(input('Enter a positive number (0 to stop): '))
-
 while number != 0:
     total += number
     number = float(input('Enter another number (0 to stop): '))
-
 print(f'The total sum is {total:.2f}.')
 ```
 ### Example  Factorial Calculator
@@ -171,16 +283,12 @@ Write a program that calculates the factorial of a number entered by the user. T
 
 number = int(input('Enter a positive integer to calculate its factorial: '))
 factorial = 1
-
 while number < 0:
     number = int(input('Invalid input. Enter a positive integer: '))
-
 while number > 0:
     factorial *= number
     number -= 1
-
 print(f'The factorial is {factorial}.')
-
 ```
 
 ### Example Even Number Counter
