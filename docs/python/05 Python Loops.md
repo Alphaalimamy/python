@@ -155,25 +155,27 @@ while number <= 15:
 ```
 output
 ```
-3
-6
-9
-15
+1 x 3 = 3
+2 x 3 = 6
+3 x 3 = 9
+4 x 3 = 12
+5 x 3 = 15
 ```
 
 Method 2
 ```py
 number = 1
 while number <= 5:
-    print(number * 3)
+    print(f'{number} x {3} = {number * 3}')
     number += 1
 ```
 output
 ```
-3
-6
-9
-15
+1 x 3 = 3
+2 x 3 = 6
+3 x 3 = 9
+4 x 3 = 12
+5 x 3 = 15
 ```
 ### Example 4:
 You are a teacher organizing a small class activity where you need to print the numbers 1 to 5 on the board, one by one.
