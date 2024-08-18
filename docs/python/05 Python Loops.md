@@ -733,6 +733,101 @@ loop will iterate 60 times for each iteration of the outermost loop. When the ou
 loop has iterated 24 times, the middle loop will have iterated 1,440 times and the innermost
 loop will have iterated 86,400 times!
 
+### Printing a Right-Angle Triangle Pattern
+Write a program that prints a right-angle triangle pattern of stars (*). The number of rows should be 5.
+```python
+rows = 5
+for i in range(1, rows + 1):
+    for j in range(i):
+        print('*', end='')
+    print()  # Move to the next line after each row
+```
+```
+*
+**
+***
+****
+*****
+```
+### Beginner-Intermediate: Generating a Multiplication Table
+Create a multiplication table for numbers from 1 to 5.
+
+```python
+for i in range(1, 6):
+    for j in range(1, 6):
+        print(f"{i * j:3}", end=' ')
+    print()  # Move to the next line after each row
+```
+```
+ 1   2   3   4   5 
+  2   4   6   8  10 
+  3   6   9  12  15 
+  4   8  12  16  20 
+  5  10  15  20  25
+```
+### Intermediate: Creating a Grid of Coordinates
+Write a program that generates all possible coordinates for a 3x3 grid. Each coordinate should be printed as (x, y).
+```python
+for x in range(3):
+    for y in range(3):
+        print(f"({x}, {y})", end=' ')
+    print()  # Move to the next line after each row
+```
+```
+(0, 0) (0, 1) (0, 2) 
+(1, 0) (1, 1) (1, 2) 
+(2, 0) (2, 1) (2, 2)
+```
+### Intermediate-Advanced: Transposing a Matrix
+Given a 3x3 matrix, write a program to transpose the matrix (swap rows with columns).
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+transpose = []
+
+for i in range(len(matrix)):
+    row = []
+    for j in range(len(matrix[i])):
+        row.append(matrix[j][i])
+    transpose.append(row)
+
+# Print transposed matrix
+for row in transpose:
+    print(row)
+```
+```
+[1, 4, 7]
+[2, 5, 8]
+[3, 6, 9]
+```
+### Advanced: Generating Pascal's Triangle
+Generate the first 5 rows of Pascal's Triangle. Each number is the sum of the two numbers directly above it.
+```python
+rows = 5
+triangle = []
+
+for i in range(rows):
+    row = [1] * (i + 1)
+    for j in range(1, i):
+        row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+    triangle.append(row)
+
+# Print Pascal's Triangle
+for row in triangle:
+    print(row)
+```
+```
+[1]
+[1, 1]
+[1, 2, 1]
+[1, 3, 3, 1]
+[1, 4, 6, 4, 1]
+```
+
 ### Seating Arrangement in a Theater
 A theater has 10 rows, each with 15 seats. You want to generate a seating chart that labels each seat with its row and seat number (e.g., "Row 1 Seat 1").
 
