@@ -530,7 +530,7 @@ for num in [0, 1, 2, 3, 4]:
 Both snippets will print the numbers 0 through 4 because the loop iterates five times.
 
 #### Real-World Example: Speed Conversion
-Imagine your friend Alpha Leigh has a Kekeh with a speedometer that shows speeds in kilometers per hour (KPH). To avoid speeding tickets in the United States, where speeds are measured in miles per hour (MPH), she asks you to write a program that converts KPH to MPH. The conversion formula is:
+Imagine your friend Alpha Leigh has a Kekeh with a speedometer that shows speeds in kilometers per hour (KPH). To avoid speeding tickets in the Sierra Leone, where speeds are measured in miles per hour (MPH), he asks you to write a program that converts KPH to MPH. The conversion formula is:
 `MPH = KPH * 0.6214`
 You can create a speed conversion table using the following code:
 ```python
