@@ -732,3 +732,21 @@ The innermost loop will iterate 60 times for each iteration of the middle loop. 
 loop will iterate 60 times for each iteration of the outermost loop. When the outermost
 loop has iterated 24 times, the middle loop will have iterated 1,440 times and the innermost
 loop will have iterated 86,400 times!
+
+### Seating Arrangement in a Theater
+A theater has 10 rows, each with 15 seats. You want to generate a seating chart that labels each seat with its row and seat number (e.g., "Row 1 Seat 1").
+
+```python
+for row in range(1, 11):
+    for seat in range(1, 16):
+        print(f"Row {row} Seat {seat}", end=' | ')
+    print()  # Move to the next line after printing one row of seats
+```
+### Multiplication Table
+Generate a multiplication table for numbers from 1 to 10. Each cell should contain the product of the row and column numbers.
+```python
+for i in range(1, 11):
+    for j in range(1, 11):
+        print(f"{i * j:4}", end=' ')  # Print with uniform spacing
+    print()  # Move to the next line after each row
+```
