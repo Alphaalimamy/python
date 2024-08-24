@@ -737,8 +737,8 @@ loop will have iterated 86,400 times!
 Write a program that prints a right-angle triangle pattern of stars (*). The number of rows should be 5.
 ```python
 rows = 5
-for i in range(1, rows + 1):
-    for j in range(i):
+for row in range(1, rows + 1):
+    for col in range(i):
         print('*', end='')
     print()  # Move to the next line after each row
 ```
@@ -753,13 +753,13 @@ for i in range(1, rows + 1):
 Create a multiplication table for numbers from 1 to 5.
 
 ```python
-for i in range(1, 6):
-    for j in range(1, 6):
-        print(f"{i * j:3}", end=' ')
+for row in range(1, 6):
+    for col in range(1, 6):
+        print(f"{row * col:4}", end=" ")
     print()  # Move to the next line after each row
 ```
 ```
- 1   2   3   4   5 
+  1   2   3   4   5 
   2   4   6   8  10 
   3   6   9  12  15 
   4   8  12  16  20 
