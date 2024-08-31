@@ -89,6 +89,7 @@ Professional Appliance Service, Inc. offers maintenance and repair services for 
 - Step 2: Remove the six screws from the back of the dryer.
 - Step 3: Remove the dryer’s back panel.
 - Step 4: Pull the top of the dryer straight up.
+  
 During your interview with the owner, you determine that the program should display the steps one at a time. You decide that after each step is displayed, the user will be asked to press the Enter key to see the next step. Here is the algorithm in pseudocode:
 - Display a starting message, explaining what the program does.
 - Ask the user to press Enter to see step 1.
@@ -269,16 +270,14 @@ def show_double(number):
 # Call the main function.
 value = 5
 show_double(value)
-``
+```
 ### Output
 ```
 10
 ```
 ### Spotlight Exercise
 Passing an Argument to a Function
-Your friend Michael runs a catering company. Some of the ingredients that his recipes require are measured in cups. When he goes to the grocery store to buy those ingredients,
-however, they are sold only by the fluid ounce. He has asked you to write a simple program
-that converts cups to fluid ounces.
+Your friend Michael runs a catering company. Some of the ingredients that his recipes require are measured in cups. When he goes to the grocery store to buy those ingredients, however, they are sold only by the fluid ounce. He has asked you to write a simple program that converts cups to fluid ounces.
 You design the following algorithm:
 - Display an introductory screen that explains what the program does.
 - Get the number of cups.
