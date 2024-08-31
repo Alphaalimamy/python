@@ -228,18 +228,18 @@ def bad_function():
 # have local variables with the same name.
 
 def main():
-    # Call the texas function.
-    texas()
-    # Call the california function.
-    california()
+    # Call mambolo function.
+    mambolo()
+    # Call mayakie function.
+    mayakie()
 
-# Definition of the texas function. It creates
+# Definition of the mambolo function. It creates
 # a local variable named birds.
 def mambolo():
     birds = 5000
     print('Mambolo has', birds, 'birds.')
 
-# Definition of the california function. It also
+# Definition of the mayakie function. It also
 # creates a local variable named birds.
 def mayakie():
     birds = 8000
