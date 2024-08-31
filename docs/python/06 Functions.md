@@ -321,14 +321,6 @@ reference the formula is:
 Enter the number of cups: 3
 That converts to 24 ounces.
 ```
-This program converts measurements
-in cups to fluid ounces. For your
-reference the formula is:
-1 cup = 8 fluid ounces
-
-Enter the number of cups: 3
-That converts to 24 ounces.
-```
 
 ## Passing Multiple Arguments
 ```python
@@ -348,6 +340,7 @@ num_2 = 45
 print('The sum ofnum_1 and num_2 is')
 show_sum(num_1, num_2)
 ```
+### Output
 ```
 The sum of 12 and 45 is
 57
