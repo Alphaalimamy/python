@@ -66,6 +66,131 @@ def my_bio():
 # call the my_bio function
 my_bio()
 ```
+### Example 2: Write a function that prints your favorite subjects
+```python
+# Step 1: Define the function
+def favorite_book():
+    book_1 = "Getting Started with Python"
+    book_2 = "How to increase Your Income"
+    book_3 = "The Success Principle"
+    print(f"1. {book_1} \n2.{book_2} \n3.{book_3}")
+# Step 2: call the  favorite_book function
+favorite_book()
+```
+```
+1. Getting Started with Python 
+2.How to increase Your Income 
+3.The Success Principle
+```
+
+Defining and Calling Functions
+Professional Appliance Service, Inc. offers maintenance and repair services for household appliances. The owner wants to give each of the company’s service technicians a small handheld computer that displays step-by-step instructions for many of the repairs that they perform. To see how this might work, the owner has asked you to develop a program that displays the following instructions for disassembling an Acme laundry dryer:
+- Step 1: Unplug the dryer and move it away from the wall.
+- Step 2: Remove the six screws from the back of the dryer.
+- Step 3: Remove the dryer’s back panel.
+- Step 4: Pull the top of the dryer straight up.
+During your interview with the owner, you determine that the program should display the steps one at a time. You decide that after each step is displayed, the user will be asked to press the Enter key to see the next step. Here is the algorithm in pseudocode:
+- Display a starting message, explaining what the program does.
+- Ask the user to press Enter to see step 1.
+- Display the instructions for step 1.
+- Ask the user to press Enter to see the next step.
+- Display the instructions for step 2.
+- Ask the user to press Enter to see the next step.
+- Display the instructions for step 3.
+- Ask the user to press Enter to see the next step.
+- Display the instructions for step 4.
+
+```python
+# This program displays step-by-step instructions for disassembling an Acme dryer.
+# The main function performs the program's main logic.
+def main():
+    # Display the start-up message.
+    startup_message()
+    input('Press Enter to see Step 1.')
+    
+    # Display step 1.
+    step1()
+    input('Press Enter to see Step 2.')
+    
+    # Display step 2.
+    step2()
+    input('Press Enter to see Step 3.')
+    
+    # Display step 3.
+    step3()
+    input('Press Enter to see Step 4.')
+    
+    # Display step 4.
+    step4()
+```
+```python
+# The startup_message function displays the
+# program's initial message on the screen.
+def startup_message():
+    print('This program tells you how to')
+    print('disassemble an ACME laundry dryer.')
+    print('There are 4 steps in the process.')
+    print()
+```
+```python
+# The step1 function displays the instructions
+# for step 1.
+def step1():
+    print('Step 1: Unplug the dryer and')
+    print('move it away from the wall.')
+    print()
+```
+```python
+# The step2 function displays the instructions
+# for step 2.
+def step2():
+    print('Step 2: Remove the six screws')
+    print('from the back of the dryer.')
+    print()
+```
+```python
+# The step3 function displays the instructions
+# for step 3.
+def step3():
+    print('Step 3: Remove the back panel')
+    print('from the dryer.')
+    print()
+```
+```python
+# The step4 function displays the instructions
+# for step 4.
+def step4():
+    print('Step 4: Pull the top of the')
+    print('dryer straight up.')
+    print()
+```
+```python
+# Call the main function to begin the program.
+main()
+```
+
+```
+This program tells you how to
+disassemble an ACME laundry dryer.
+There are 4 steps in the process.
+
+Press Enter to see Step 1: 1
+Step 1: Unplug the dryer and
+move it away from the wall.
+
+Press Enter to see Step 2: 2
+Step 2: Remove the six screws
+from the back of the dryer.
+
+Press Enter to see Step 3: 3
+Step 3: Remove the back panel
+from the dryer.
+
+Press Enter to see Step 4: 4
+Step 4: Pull the top of the
+dryer straight up.
+
+```
 ### Exercises
 - A function definition has what two parts?
 - What does the phrase “calling a function” mean?
