@@ -101,6 +101,12 @@ During your interview with the owner, you determine that the program should disp
 - Ask the user to press Enter to see the next step.
 - Display the instructions for step 4.
 
+
+                            main
+                              |
+    ------------------------------------------------------
+    |                     |         |           |         |
+startup_message    ---> step1 ---> step2 ---> step3 ---> step4
 ```python
 # This program displays step-by-step instructions for disassembling an Acme dryer.
 # The main function performs the program's main logic.
