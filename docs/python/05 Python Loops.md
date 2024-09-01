@@ -861,8 +861,9 @@ Write a program that uses nested loops to collect data and calculate the average
 rainfall, and the average rainfall per month for the entire period.
 ### 5. Celsius to Fahrenheit Table
 Write a program that displays a table of the Celsius temperatures 0 through 20 and their Fahrenheit equivalents. The formula for converting a temperature from Celsius to Fahrenheit is
-    ```math
-      $$F = \frac{9}{5} * c  + 32$$
+    [
+    F = 9/5 * c  + 32
+    ]
 where F is the Fahrenheit temperature and C is the Celsius temperature. Your program must use a loop to display the table.
 
 ### 6 Pennies for Pay
