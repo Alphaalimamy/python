@@ -66,7 +66,7 @@ def my_bio():
 # call the my_bio function
 my_bio()
 ```
-### Example 2: Write a function that prints your favorite subjects
+### Example 2: Write a function that prints your favorite books
 ```python
 # Step 1: Define the function
 def favorite_book():
@@ -83,7 +83,7 @@ favorite_book()
 3.The Success Principle
 ```
 
-Defining and Calling Functions
+## Defining and Calling Functions
 Professional Appliance Service, Inc. offers maintenance and repair services for household appliances. The owner wants to give each of the company’s service technicians a small handheld computer that displays step-by-step instructions for many of the repairs that they perform. To see how this might work, the owner has asked you to develop a program that displays the following instructions for disassembling an Acme laundry dryer:
 - Step 1: Unplug the dryer and move it away from the wall.
 - Step 2: Remove the six screws from the back of the dryer.
