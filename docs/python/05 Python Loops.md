@@ -852,7 +852,7 @@ for i in range(1, 11):
 ### 1. Bug Collector
 A bug collector collects bugs every day for five days. Write a program that keeps a running total of the number of bugs collected during the five days. The loop should ask for the number of bugs collected for each day, and when the loop is finished, the program should display the total number of bugs collected.
 ### 2. Calories Burned
-Running on a particular treadmill you burn 4.2 calories per minute. Write a program that uses a loop to display the number of calories burned after 10, 15, 20, 25, and 30 minutes.
+Running on a particular treadmill you burn 4.2 calories per minute. Write a program that uses a loop to display the number of calories burned after `10, 15, 20, 25, and 30` minutes.
 ### 3. Budget Analysis
 Write a program that asks the user to enter the amount that he or she has budgeted for a month. A loop should then prompt the user to enter each of his or her expenses for the month and keep a running total. When the loop finishes, the program should display the amount that the user is over or under budget.
 
@@ -861,9 +861,7 @@ Write a program that uses nested loops to collect data and calculate the average
 rainfall, and the average rainfall per month for the entire period.
 ### 5. Celsius to Fahrenheit Table
 Write a program that displays a table of the Celsius temperatures 0 through 20 and their Fahrenheit equivalents. The formula for converting a temperature from Celsius to Fahrenheit is
-    [
-    F = 9/5 * c  + 32
-    ]
+ ` F = 9/5 * c  + 32 `
 where F is the Fahrenheit temperature and C is the Celsius temperature. Your program must use a loop to display the table.
 
 ### 6 Pennies for Pay
@@ -875,8 +873,8 @@ Assuming the ocean’s level is currently rising at about 1.6 millimeters per ye
 ### 9.  Tuition Increase
 At one college, the tuition for a full-time student is Le8,000 per semester. It has been announced that the tuition will increase by 3 percent each year for the next 5 years. Write a program with a loop that displays the projected semester tuition amount for the next 5 years.
 ### 10. Calculating the Factorial of a Number
-In mathematics, the notation n! represents the factorial of the nonnegative integer n . The factorial of n is the product of all the nonnegative integers from 1 to n. For example, 7!=  1 x 2 x 3 x 4 x 5 x 6 x 7 = 5,040
-and 4! = 1 x 2 x 3 x 4 = 24. Write a program that lets the user enter a nonnegative integer and then uses a loop to calculate the factorial of that number. Display the factorial
+In mathematics, the notation n! represents the factorial of the nonnegative integer n . The factorial of n is the product of all the nonnegative integers from 1 to n. For example, `7!=  1 x 2 x 3 x 4 x 5 x 6 x 7 = 5,040`
+and `4! = 1 x 2 x 3 x 4 = 24`. Write a program that lets the user enter a nonnegative integer and then uses a loop to calculate the factorial of that number. Display the factorial
 
 ### 11 Write a program that uses nested loops to draw this pattern:
 ```
