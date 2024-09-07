@@ -377,9 +377,29 @@ def reverse_name(first, last):
 main()
 ```
 ### Program Output
+
+```python
+# This program demonstrates passing two strings as keyword arguments to a function.
+
+def main():
+    first_name = input('Enter your first name: ')
+    last_name = input('Enter your last name: ')
+    print('Your name reversed is')
+    reverse_name(last=last_name, first=first_name)
+
+def reverse_name(first, last):
+    print(last, first)
+
+# Call the main function.
+main()
 ```
-The sum of 12 and 45 is
-5
+
+```
+Program Output (with input shown in bold)
+Enter your first name: Rugiatu
+Enter your last name: Salieu
+Your name reversed is
+Salieu Rugiatu
 ```
 
 ## Making Changes to Parameters
@@ -444,30 +464,6 @@ main()
 The simple interest will be Le: 1000.00.
 ```
 
-```python
-# This program demonstrates passing two strings as
-2 # keyword arguments to a function.
-3 4
-def main():
-    first_name = input('Enter your first name: ')
-    last_name = input('Enter your last name: ')
-    print('Your name reversed is')
-    reverse_name(last=last_name, first=first_name)
-
-def reverse_name(first, last):
-    print(last, first)
-
-# Call the main function.
-main()
-```
-
-```
-Program Output (with input shown in bold)
-Enter your first name: Rugiatu
-Enter your last name: Salieu
-Your name reversed is
-Salieu Rugiatu
-```
 Mixing Keyword Arguments with Positional Arguments
 It is possible to mix positional arguments and keyword arguments in a function call, but the
 positional arguments must appear first, followed by the keyword arguments. Otherwise an error will occur. Here is an example of how we might call the show_interest function of Program 5-10 using both positional and keyword arguments:
