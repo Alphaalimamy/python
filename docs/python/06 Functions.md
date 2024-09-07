@@ -219,9 +219,21 @@ main()
 ## Scope and Local Variables
 A variable’s scope is the part of a program in which the variable may be accessed. A variable is visible only to statements in the variable’s scope. A local variable’s scope is the function in which the variable is created. 
 ```python
+
 def bad_function():
-    print('The value is', val) # This will cause an error!
+    print("The value is: ", val) # <-- calling a variable before it is created
     val = 5
+
+bad_function()
+
+
+def good_function():
+    val = 5
+    print("The value is: ", val)
+
+
+good_function()
+
 ```
 ```python
 # This program demonstrates two functions that
