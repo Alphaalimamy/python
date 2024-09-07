@@ -275,8 +275,7 @@ show_double(value)
 ```
 10
 ```
-### Spotlight Exercise
-Passing an Argument to a Function
+### Spotlight Exercise: Passing an Argument to a Function
 Your friend Michael runs a catering company. Some of the ingredients that his recipes require are measured in cups. When he goes to the grocery store to buy those ingredients, however, they are sold only by the fluid ounce. He has asked you to write a simple program that converts cups to fluid ounces.
 You design the following algorithm:
 - Display an introductory screen that explains what the program does.
@@ -365,7 +364,203 @@ def reverse_name(first, last):
 # Call the main function.
 main()
 ```
+### Program Output
+```
+The sum of 12 and 45 is
+5
+```
 
+## Making Changes to Parameters
+When an argument is passed to a function in Python, the function parameter variable will
+reference the argument’s value. However, any changes that are made to the parameter variable will not affect the argument. 
+```python
+# This program demonstrates what happens when you
+# change the value of a parameter.
+
+def main():
+    value = 99
+    print('The value is', value)
+    change_me(value)
+    print('Back in main the value is', value)
+
+def change_me(arg):
+    print('I am changing the value.')
+    arg = 0
+    print('Now the value is', arg)
+
+# Call the main function.
+main()
+```
+```
+## Program Output
+The value is 99
+I am changing the value.
+Now the value is 0
+Back in main the value is 99
+```
+
+### Keyword Arguments
+In addition to this conventional form of argument passing, the Python
+language allows you to write an argument in the following format, to specify which parameter variable the argument should be passed to:
+
+        `parameter_name=value`
+        
+In this format, parameter_name is the name of a parameter variable and value is the value
+being passed to that parameter. An argument that is written in accordance with this syntax
+is known as a keyword argument
+
+```python
+# This program demonstrates keyword arguments.
+
+def main():
+    # Show the amount of simple interest, using 0.01 as
+    # interest rate per period, 10 as the number of periods, and Le10,000 as the principal.
+    show_interest(rate=0.01, periods=10, principal=10000.0)
+
+# The show_interest function displays the amount of
+# simple interest for a given principal, interest rate per period, and number of periods.
+
+def show_interest(principal, rate, periods):
+    interest = principal * rate * periods
+    print('The simple interest will be Le: ', format(interest, ',.2f'), sep='')
+
+# Call the main function.
+main()
+```
+```
+## Output
+The simple interest will be Le: 1000.00.
+```
+
+```python
+# This program demonstrates passing two strings as
+2 # keyword arguments to a function.
+3 4
+def main():
+    first_name = input('Enter your first name: ')
+    last_name = input('Enter your last name: ')
+    print('Your name reversed is')
+    reverse_name(last=last_name, first=first_name)
+
+def reverse_name(first, last):
+    print(last, first)
+
+# Call the main function.
+main()
+```
+
+```
+Program Output (with input shown in bold)
+Enter your first name: Rugiatu
+Enter your last name: Salieu
+Your name reversed is
+Salieu Rugiatu
+```
+Mixing Keyword Arguments with Positional Arguments
+It is possible to mix positional arguments and keyword arguments in a function call, but the
+positional arguments must appear first, followed by the keyword arguments. Otherwise an error will occur. Here is an example of how we might call the show_interest function of Program 5-10 using both positional and keyword arguments:
+  `show_interest(10000.0, rate=0.01, periods=10)`
+In this statement, the first argument, 10000.0, is passed by its position to the principal
+parameter. The second and third arguments are passed as keyword arguments. The following function call will cause an error, however, because a non-keyword argument follows a
+keyword argument:
+# This will cause an ERROR!
+show_interest(1000.0, rate=0.01, 10)
+
+### Exercises
+- What are the pieces of data that are passed into a function called?
+- What are the variables that receive pieces of data in a function called?
+- What is a parameter variable’s scope?
+- When a parameter is changed, does this affect the argument that was passed into the parameter?
+- The following statements call a function named show_data. Which of the statements passes arguments by position, and which passes keyword arguments?
+    a. show_data(name='Kathryn', age=25)
+    b. show_data('Kathryn', 25)
+
+
+### Global Variables and Global Constants
+A global variable is accessible to all the functions in a program file.
+
+```python
+# Create a global variable.
+my_value = 10
+
+# The show_value function prints the value of the global variable.
+def show_value():
+    print(my_value)
+
+# Call the show_value function.
+show_value()
+```
+```
+## Program Output
+10
+```
+```python
+# Create a global variable.
+number = 0
+
+def main():
+    global number
+    number = int(input('Enter a number: '))
+    show_number()
+
+def show_number():
+    print('The number you entered is', number)
+
+    # Call the main function.
+main()
+```
+```
+## Program Output
+Enter a number: 55 enter
+The number you entered is 55
+```
+
+### Global Constants
+Although you should try to avoid the use of global variables, it is permissible to use global
+constants in a program. A global constant is a global name that references a value that cannot be changed. Because a global constant’s value cannot be changed during the program’s execution, you do not have to worry about many of the potential hazards that are associated with the use of global variables
+
+### Using Global Constants
+Rugiatu works for Integrated Systems, Inc., a software company that has a reputation for providing excellent fringe benefits. One of their benefits is a quarterly bonus that is paid to all employees. Another benefit is a retirement plan for each employee. The company contributes 5 percent of each employee’s gross pay and bonuses to their retirement plans.
+Marilyn wants to write a program that will calculate the company’s contribution to an employee’s retirement account for a year. She wants the program to show the amount of contribution for the employee’s gross pay and for the bonuses separately. Here is an algorithm
+for the program:
+- Get the employee’s annual gross pay.
+- Get the amount of bonuses paid to the employee.
+- Calculate and display the contribution for the gross pay.
+-  Calculate and display the contribution for the bonuses.
+
+```python
+# The following is used as a global constant the contribution rate.
+CONTRIBUTION_RATE = 0.05
+
+def main():
+    gross_pay = float(input('Enter the gross pay: '))
+    bonus = float(input('Enter the amount of bonuses: '))
+    show_pay_contrib(gross_pay)
+    show_bonus_contrib(bonus)
+
+# The show_pay_contrib function accepts the gross  pay as an argument and displays the retirement
+# contribution for that amount of pay.
+def show_pay_contrib(gross):
+    contrib = gross * CONTRIBUTION_RATE
+    print('Contribution for gross pay: Le: ', format(contrib, ',.2f'), sep='')
+
+# The show_bonus_contrib function accepts the bonus amount as an argument and displays the
+# retirement contribution for that amount of pay.
+
+def show_bonus_contrib(bonus):
+    contrib = bonus * CONTRIBUTION_RATE
+    print('Contribution for bonuses: Le: ', format(contrib, ',.2f'), sep='')
+
+# Call the main function.
+main()
+```
+```
+Program Output (with input shown in bold)
+Enter the gross pay: 80000.00e
+Enter the amount of bonuses: 20000.00e
+Contribution for gross pay: Le: 4000.00
+Contribution for bonuses: Le: 1000.00
+```
 ## Programming Exercises
 
 1. **Kilometer Converter**  
