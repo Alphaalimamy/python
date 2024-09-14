@@ -967,9 +967,13 @@ Together you are 46 years old.
 ```
 
 ## Making the Most of the return Statement
-```def sum(num1, num2):
+```
+def sum(num1, num2):
+
     result = num 1 + num 2
-    return result```
+
+    return result
+```
     
 Notice that two things happen inside this function: 
 1. The value of the expression `num1 + num2` is assigned to the result variable, and
