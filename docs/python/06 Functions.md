@@ -569,6 +569,80 @@ Enter the amount of bonuses: 20000.00e
 Contribution for gross pay: Le: 4000.00
 Contribution for bonuses: Le: 1000.00
 ```
+
+```
+1. What is the scope of a global variable?
+2. Give one good reason that you should not use global variables in a program.
+3. What is a global constant? Is it permissible to use global constants in a program?
+```
+
+## Value-Returning Functions: Generating Random Numbers
+A value-returning function is a function that returns a value back to the
+part of the program that called it. Python, as well as most other programming languages, provides a library of prewritten functions that perform commonly needed tasks. These libraries typically contain a function
+that generates random numbers.
+
+A value-returning function is a special type of function. It is like a void function in the following ways.
+1. It is a group of statements that perform a specific task.
+2. When you want to execute the function, you call it.
+
+## Standard Library Functions and the import Statement
+Python, as well as most other programming languages, comes with a standard library of functions that have already been written for you. These functions, known as library functions, make a programmer’s job easier because they perform many of the tasks that programmers commonly need to perform. In fact, you have already used several of Python’s library functions. Some of the functions that you have used are print, input, and range. Python has
+many other library functions.
+
+### Generating Random Numbers
+1. Random numbers are commonly used in games. For example, computer games that let the player roll dice use random numbers to represent the values of the dice. Programs
+2. Random numbers are useful in simulation programs. In some simulations, the computer must randomly decide how a person, animal, insect, or other living being will behave. Formulas can be constructed in which a random number is used to determine
+various actions and events that take place in the program.
+3. Random numbers are useful in statistical programs that must randomly select data for analysis.
+4. Random numbers are commonly used in computer security to encrypt sensitive data.
+
+```python
+# This program displays a random number in the range of 1 through 10.
+import random
+
+def main():
+    # Get a random number.
+    number = random.randint(1, 10)
+    # Display the number.
+    print('The number is', number)
+
+# Call the main function.
+main()
+```
+### Program Output
+```
+The number is 7
+```
+
+### Example 
+```python
+# This program displays five random numbers in the range of 1 through 100.
+import random
+
+def main():
+    for count in range(5):
+        # Get a random number.
+        number = random.randint(1, 100)
+        # Display the number.
+        print(number)
+
+# Call the main function.
+main()
+```
+### Program Output
+```
+89
+7
+16
+41
+1
+```
+### NOTE
+If you just want to display a random number, it is not necessary to assign the random number to a variable. You can send the random function’s return value directly to the print function, as shown here:
+
+        `print(random.randint(1, 10))`
+        
+When this statement executes, the randint function is called. The function generates a random number in the range of 1 through 10. That value is returned and then sent to the print function. 
 ## Programming Exercises
 
 1. **Kilometer Converter**  
