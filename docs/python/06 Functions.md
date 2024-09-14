@@ -663,6 +663,108 @@ main()
 41
 1
 ```
+
+
+### Random Floating Point Number
+```python
+import random
+
+def random_float():
+    return random.random()
+
+# Example: Generate a random float
+print(random_float())
+```
+### Random Selection from a List
+```python
+import random
+
+def random_choice_from_list(items):
+    return random.choice(items)
+
+# Example: Randomly select from a list of fruits
+fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+print(random_choice_from_list(fruits))
+```
+### Random Shuffle
+```python
+import random
+
+def shuffle_list(items):
+    random.shuffle(items)
+    return items
+
+# Example: Shuffle a list of numbers
+numbers = [1, 2, 3, 4, 5]
+print(shuffle_list(numbers))
+```
+
+### Random Integer from a Range
+```python
+import random
+
+def random_int_in_range(start, end):
+    return random.randint(start, end)
+
+# Example: Generate a random integer between 1 and 50
+print(random_int_in_range(1, 50))
+```
+
+### Random Sample of Multiple Items from a List
+```python
+import random
+
+def random_sample_from_list(items, sample_size):
+    return random.sample(items, sample_size)
+
+# Example: Randomly select 3 items from a list
+colors = ["red", "blue", "green", "yellow", "purple", "orange"]
+print(random_sample_from_list(colors, 3))
+```
+
+### Random Boolean Value
+```python
+import random
+
+def random_boolean():
+    return random.choice([True, False])
+
+# Example: Generate a random True or False
+print(random_boolean())
+```
+### Random Number from Normal Distribution
+```python
+import random
+
+def random_normal(mu, sigma):
+    return random.gauss(mu, sigma)
+
+# Example: Generate a random number with mean 0 and standard deviation 1
+print(random_normal(0, 1))
+```
+
+```python
+import random
+import matplotlib.pyplot as plt
+
+# Function to generate a random number from normal distribution
+def random_normal(mu, sigma):
+    return random.gauss(mu, sigma)
+
+# Generate 1000 random numbers with mean 0 and standard deviation 1
+data = [random_normal(0, 1) for _ in range(1000)]
+
+# Plot the histogram of the generated values
+plt.figure(figsize=(8, 6))
+plt.hist(data, bins=30, color='blue', edgecolor='black', alpha=0.7)
+plt.title('Random Numbers from Normal Distribution (mu=0, sigma=1)')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.grid(True)
+plt.show()
+```
+
+
 ### Experimenting with Random Numbers in Interactive Mode
 To get a feel for the way the randint function works with different arguments, you might want to experiment with it in interactive mode. To demonstrate, look at the following interactive session.
 
