@@ -643,6 +643,145 @@ If you just want to display a random number, it is not necessary to assign the r
         `print(random.randint(1, 10))`
         
 When this statement executes, the randint function is called. The function generates a random number in the range of 1 through 10. That value is returned and then sent to the print function. 
+
+```python
+# This program displays five random # numbers in the range of 1 through 100.
+import random
+
+def main():
+    for count in range(5):
+        print(random.randint(1, 100))
+
+# Call the main function.
+main()
+```
+### Program Output
+```
+89
+7
+16
+41
+1
+```
+### Experimenting with Random Numbers in Interactive Mode
+To get a feel for the way the randint function works with different arguments, you might want to experiment with it in interactive mode. To demonstrate, look at the following interactive session.
+
+```python
+import random 
+>>> random.randint(1, 10) ENTER
+45
+>>> random.randint(1, 100) ENTER
+98
+>>> random.randint(100, 200) ENTER
+181
+>>>
+```
+
+## In the Spotlight:
+### Using Random Numbers
+Brother Musa teaches an introductory statistics class and has asked you to write a program that he can use in class to simulate the rolling of dice. The program should randomly generate two numbers in the range of 1 through 6 and display them. In your interview with Brother Musa, you learn that he would like to use the program to simulate several rolls of the
+dice, one after the other. Here is the pseudocode for the program:
+`
+While the user wants to roll the dice:
+    1. Display a random number in the range of 1 through 6
+    2. Display another random number in the range of 1 through 6
+    3. Ask the user if he or she wants to roll the dice again
+`
+You will write a while loop that simulates one roll of the dice and then asks the user if another roll should be performed. As long as the user answers “y” for yes, the loop will repeat.
+
+```python
+# This program the rolling of dice.
+import random
+
+#Constants for the minimum and maximum random numbers
+MIN = 1
+MAX = 6
+
+def main():
+    # Create a variable to control the loop.
+    again = 'y'
+
+    # Simulate rolling the dice.
+    while again == 'y' or again == 'Y':
+        print('Rolling the dice ...')
+        print('Their values are:')
+        print(random.randint(MIN, MAX))
+        print(random.randint(MIN, MAX))
+        # Do another roll of the dice?
+        again = input('Roll them again? (y = yes): ')
+
+# Call the main function.
+main()
+```
+### Program Output
+```
+Rolling the dice ...
+Their values are:
+1
+3
+Roll them again? (y = yes): y ENTER
+Rolling the dice ...
+Their values are:
+1
+1
+Roll them again? (y = yes): y ENTER
+Rolling the dice ...
+Their values are:
+5
+6
+Roll them again? (y = yes): y ENTER
+```
+
+## In the Spotlight:
+### Using Random Numbers to Represent Other Values
+Brother Musa was so happy with the dice rolling simulator that you wrote for him, he has asked you to write one more program. He would like a program that he can use to simulate ten coin tosses, one after the other. Each time the program simulates a coin toss, it should randomly display either “Heads” or “Tails”.
+
+You decide that you can simulate the tossing of a coin by randomly generating a number in the range of 1 through 2. You will write an if statement that displays “Heads” if the random number is 1, or “Tails” otherwise. Here is the pseudocode:
+Repeat 10 times:
+
+    If a random number in the range of 1 through 2 equals 1 then:
+        Display 'Heads'
+    Else:
+        Display 'Tails'
+        
+Because the program should simulate 10 tosses of a coin you decide to use a for loop
+
+```python
+# This program simulates 10 tosses of a coin.
+import random
+
+# Constants
+HEADS = 1
+TAILS = 2
+TOSSES = 10
+
+def main():
+    for toss in range(TOSSES):
+        # Simulate the coin toss.
+        if random.randint(HEADS, TAILS) == HEADS:
+            print('Heads')
+        else:
+            print('Tails')
+
+# Call the main function.
+main()
+```
+
+### Program Output
+```
+Tails
+Tails
+Heads
+Tails
+Heads
+Heads
+Heads
+Tails
+Heads
+Tails
+```
+
+
 ## Programming Exercises
 
 1. **Kilometer Converter**  
