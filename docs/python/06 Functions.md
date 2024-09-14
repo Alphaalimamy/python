@@ -846,6 +846,18 @@ Repeat 10 times:
         Display 'Heads'
     Else:
         Display 'Tails'```
+
+
+BEGIN
+    SET random_number to a random integer between 1 and 2
+    IF random_number equals 1 THEN
+        DISPLAY "Heads"
+    ELSE
+        DISPLAY "Tails"
+    ENDIF
+END
+
+
         
 Because the program should simulate 10 tosses of a coin you decide to use a for loop
 
