@@ -784,12 +784,11 @@ import random
 Brother Musa teaches an introductory statistics class and has asked you to write a program that he can use in class to simulate the rolling of dice. The program should randomly generate two numbers in the range of 1 through 6 and display them. In your interview with Brother Musa, you learn that he would like to use the program to simulate several rolls of the
 dice, one after the other. Here is the pseudocode for the program:
 
-
-`While the user wants to roll the dice:
-    1. Display a random number in the range of 1 through 6
-    2. Display another random number in the range of 1 through 6
-    3. Ask the user if he or she wants to roll the dice again`
-
+``` While the user wants to roll the dice:
+        1. Display a random number in the range of 1 through 6
+        2. Display another random number in the range of 1 through 6
+        3. Ask the user if he or she wants to roll the dice again`
+```
 You will write a while loop that simulates one roll of the dice and then asks the user if another roll should be performed. As long as the user answers “y” for yes, the loop will repeat.
 
 ```python
