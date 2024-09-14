@@ -841,12 +841,12 @@ Brother Musa was so happy with the dice rolling simulator that you wrote for him
 
 You decide that you can simulate the tossing of a coin by randomly generating a number in the range of 1 through 2. You will write an if statement that displays “Heads” if the random number is 1, or “Tails” otherwise. Here is the pseudocode:
 Repeat 10 times:
-
-    ```plaintext
+```
 If a random number in the range of 1 through 2 equals 1 then:
     Display 'Heads'
 Else:
-    Display 'Tails'```
+    Display 'Tails'
+```
 
 Because the program should simulate 10 tosses of a coin you decide to use a for loop
 
