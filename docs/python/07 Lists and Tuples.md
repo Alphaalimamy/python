@@ -1,4 +1,4 @@
-## Lists and Tuples 
+### Lists and Tuples 
 - Sequences
 - Introduction to Lists
 - List Slicing
