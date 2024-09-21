@@ -937,6 +937,36 @@ If we start a new interactive session and repeat these statements, we get the sa
 ## Writing Your Own Value-Returning Functions
 A value-returning function has a return statement that returns a value back to the part of the program that called it.
 
+### NOTE:
+- You write a value-returning function in the same way that you write a void function, with one exception: a value-returning function must have a return statement.
+- Here is the general format of a value-returning function definition in Python:
+```
+def function_name():
+    statement
+    statement
+    etc.
+    return expression
+```
+One of the statements in the function must be a return statement, which takes the following form:
+    ```
+    return expression
+    ```
+- The value of the expression that follows the key word return will be sent back to the part of the program that called the function.
+- This can be any value, variable, or expression that has a value (such as a math expression).
+- Here is a simple example of a value-returning function:
+
+```python
+def sum(num1, num2):
+    result = num 1 + num 2
+    return result
+```
+
+- The purpose of this function is to accept **two integer values as arguments and return their sum**.
+-  The first statement in the function’s block assigns the value of **num1 + num2** to the result variable.
+-  Next, the return statement executes, which causes the function to end execution and sends the value referenced by the
+**result** variable back to the part of the program that called the function
+
+
 ```python
 def main():
     # Get the user's age.
@@ -1013,6 +1043,34 @@ main()
 ```
 Enter the item's regular price: 100.00 
 The sale price is Le: 80.00
+```
+
+
+### Returning Boolean Values
+- Python allows you to write Boolean functions, which return either True or False.
+- You can use a Boolean function to test a condition, and then return either True or False to indicate whether the condition exists.
+- Boolean functions are useful for simplifying complex conditions that are tested in decision and repetition structures
+
+### Example
+
+```python
+def is_even(number):
+    # Determine whether number is even. If it is, set status to true. Otherwise, set status to false.
+    if (number % 2) == 0:
+        status = True
+    else:
+        status = False
+    # Return the value of the status variable.
+    return status
+```
+### Example 
+```python
+def is_invalid(mod_num):
+    if mod_num != 100 and mod_num != 200 and mod_num != 300:
+        status = True
+    else:
+        status = False
+    return status
 ```
 ## Programming Exercises
 
