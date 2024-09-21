@@ -1004,7 +1004,7 @@ def sum(num1, num2):
     return result
 ```
     
-Notice that two things happen inside this function: 
+- Notice that two things happen inside this function: 
 1. The value of the expression `num1 + num2` is assigned to the result variable, and
 2. The value of the result variable is returned
 
@@ -1071,6 +1071,208 @@ def is_invalid(mod_num):
     else:
         status = False
     return status
+```
+### Exercises
+1. What is the purpose of the return statement in a function?
+2. Look at the following function definition:
+   ```
+    def do_something(number):
+        return number * 2
+   ```
+    a. What is the name of the function?
+    b. What does the function do?
+    c.  Given the function definition, what will the following statement display?
+        ```
+           print(do_something(10))
+       ```
+3. What is a Boolean function?
+
+### The math Module
+- The Python standard library’s math module contains numerous functions that can be used in mathematical calculations.
+
+
+```python
+# This program demonstrates the sqrt function.
+import math
+
+def main():
+    # Get a number.
+    number = float(input('Enter a number: '))
+
+    # Get the square root of the number.
+    square_root = math.sqrt(number)
+
+    # Display the square root.
+    print('The square root of', number, 'is', square_root)
+
+# Call the main function.
+main()
+```
+### Example: Calculate the hypotenuse
+```python
+# This program calculates the length of a right triangle's hypotenuse.
+import math
+
+def main():
+    # Get the length of the triangle's two sides.
+    a = float(input('Enter the length of side A: '))
+    b = float(input('Enter the length of side B: '))
+
+    # Calculate the length of the hypotenuse.
+    c = math.hypot(a, b)
+
+    # Display the length of the hypotenuse.
+    print('The length of the hypotenuse is', c)
+# Call the main function.
+main()
+```
+### Program Output
+```
+Enter the length of side A: 5.0 
+Enter the length of side B: 12.0 
+The length of the hypotenuse is 13.0
+```
+
+| Function      | Description                                                                                  |
+|---------------|----------------------------------------------------------------------------------------------|
+| `acos(x)`     | Returns the arc cosine of x, in radians.                                                     |
+| `asin(x)`     | Returns the arc sine of x, in radians.                                                       |
+| `atan(x)`     | Returns the arc tangent of x, in radians.                                                    |
+| `ceil(x)`     | Returns the smallest integer that is greater than or equal to x.                             |
+| `cos(x)`      | Returns the cosine of x in radians.                                                          |
+| `degrees(x)`  | Assuming x is an angle in radians, the function returns the angle converted to degrees.       |
+| `exp(x)`      | Returns e^x.                                                                                 |
+| `floor(x)`    | Returns the largest integer that is less than or equal to x.                                 |
+| `hypot(x, y)` | Returns the length of a hypotenuse that extends from (0, 0) to (x, y).                       |
+| `log(x)`      | Returns the natural logarithm of x.                                                          |
+| `log10(x)`    | Returns the base-10 logarithm of x.                                                          |
+| `radians(x)`  | Assuming x is an angle in degrees, the function returns the angle converted to radians.       |
+| `sin(x)`      | Returns the sine of x in radians.                                                            |
+| `sqrt(x)`     | Returns the square root of x.                                                                |
+| `tan(x)`      | Returns the tangent of x in radians.                                                         |
+
+
+### Exercises
+1. What import statement do you need to write in a program that uses the math module?
+2. Write a statement that uses a math module function to get the square root of 100 and assigns it to a variable.
+3. Write a statement that uses a math module function to convert 45 degrees to radians and assigns the value to a variable
+### Program Output
+```
+Enter a number: 25 
+The square root of 25.0 is 5.0
+```
+
+### Storing Functions in Modules
+- A module is a file that contains Python code. Large programs are easier to debug and maintain when they are divided into modules.
+- A module is simply a file that contains Python code.
+- When you break a program into modules, each module should contain functions that perform related tasks.
+- For example, suppose you are writing an accounting system.
+- You would store all of the account receivable functions in their own module, all of the account payable functions in their own module, and all of the payroll functions in their own module.
+- This approach, which is called modularization, makes the program easier to understand, test, and maintain
+
+- Let’s look at a simple example. Suppose your instructor has asked you to write a program that calculates the following:
+  ```
+  - The area of a circle
+  - The circumference of a circle
+  - The area of a rectangle
+  - The perimeter of a rectangle
+  ```
+### Example: Calculate the area of a cricle
+```python
+# The circle module has functions that perform calculations related to circles.
+import math
+# The area function accepts a circle's radius as an# argument and returns the area of the circle.
+def area(radius):
+    return math.pi * radius**2
+
+# Call the function
+radius = 4
+area(radius)
+```
+### Example: Calculate the circumference of a cricle
+```python
+# The circumference function accepts a circle's
+# radius and returns the circle's circumference.
+def circumference(radius):
+    return 2 * math.pi * radius
+```
+
+```python
+# The rectangle module has functions that perform calculations related to rectangles.
+
+# The area function accepts a rectangle's width and length as arguments and returns the rectangle's area.
+def area(width, length):
+     return width * length
+
+# The perimeter function accepts a rectangle's width and length as arguments and returns the rectangle's
+# perimeter.
+def perimeter(width, length):
+    return 2 * (width + length)
+```
+
+```python
+# geometry.py
+# This program allows the user to choose various geometry calculations from a menu.
+# It imports the circle and rectangle modules.
+import circle
+import rectangle
+
+# Constants for the menu choices
+AREA_CIRCLE_CHOICE = 1
+CIRCUMFERENCE_CHOICE = 2
+AREA_RECTANGLE_CHOICE = 3
+PERIMETER_RECTANGLE_CHOICE = 4
+QUIT_CHOICE = 5
+
+# The main function.
+def main():
+    # The choice variable controls the loop and holds the user's menu choice.
+    choice = 0
+
+    while choice != QUIT_CHOICE:
+        # Display the menu.
+        display_menu()
+
+        # Get the user's choice.
+        choice = int(input('Enter your choice: '))
+
+        # Perform the selected action.
+        if choice == AREA_CIRCLE_CHOICE:
+            radius = float(input("Enter the circle's radius: "))
+            print('The area is', circle.area(radius))
+
+        elif choice == CIRCUMFERENCE_CHOICE:
+            radius = float(input("Enter the circle's radius: "))
+            print('The circumference is', circle.circumference(radius))
+
+        elif choice == AREA_RECTANGLE_CHOICE:
+            width = float(input("Enter the rectangle's width: "))
+            length = float(input("Enter the rectangle's length: "))
+            print('The area is', rectangle.area(width, length))
+
+        elif choice == PERIMETER_RECTANGLE_CHOICE:
+            width = float(input("Enter the rectangle's width: "))
+            length = float(input("Enter the rectangle's length: "))
+            print('The perimeter is', rectangle.perimeter(width, length))
+
+        elif choice == QUIT_CHOICE:
+            print('Exiting the program…')
+
+        else:
+            print('Error: invalid selection.')
+
+# The display_menu function displays a menu.
+def display_menu():
+    print(' MENU')
+    print('1) Area of a circle')
+    print('2) Circumference of a circle')
+    print('3) Area of a rectangle')
+    print('4) Perimeter of a rectangle')
+    print('5) Quit')
+
+# Call the main function.
+main()
+
 ```
 ## Programming Exercises
 
