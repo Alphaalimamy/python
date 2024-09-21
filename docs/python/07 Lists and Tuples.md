@@ -158,3 +158,129 @@ print(town)
 
 #### Ex 3.3: Your First List
 - Think of something you can store in a list. Make a list with three or four items, and then print a message that includes at least one item from your list. Your sentence could be as simple as, "One item in my list is a ____."
+
+
+<a name='accessing_all_elements'></a>Accessing all elements in a list
+---
+This is one of the most important concepts related to lists. You can have a list with a million items in it, and in three lines of code you can write a sentence for each of those million items. If you want to understand lists, and become a competent programmer, make sure you take the time to understand this section.
+
+We use a loop to access all the elements in a list. A loop is a block of code that repeats itself until it runs out of items to work with, or until a certain condition is met. In this case, our loop will run once for every item in our list. With a list that is three items long, our loop will run three times.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+for dog in dogs:
+    print(dog)
+```
+
+We have already seen how to create a list, so we are really just trying to understand how the last two lines work. These last two lines make up a loop, and the language here can help us see what is happening:
+```
+    for dog in dogs:
+```
+- The keyword "for" tells Python to get ready to use a loop.
+- The variable "dog", with no "s" on it, is a temporary placeholder variable. This is the variable that Python will place each item in the list into, one at a time.
+- The first time through the loop, the value of "dog" will be 'border collie'.
+- The second time through the loop, the value of "dog" will be 'australian cattle dog'.
+- The third time through, "dog" will be 'labrador retriever'.
+- After this, there are no more items in the list, and the loop will end.
+
+### Doing more with each item
+
+We can do whatever we want with the value of "dog" inside the loop. In this case, we just print the name of the dog.
+```
+    print(dog)
+```
+- We are not limited to just printing the word dog. We can do whatever we want with this value, and this action will be carried out for every item in the list.
+- Let's say something about each dog in our list.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+for dog in dogs:
+    print('I like ' + dog + 's.')
+```
+```
+I like border collies.
+I like australian cattle dogs.
+I like labrador retrievers.
+```
+
+### Inside and outside the loop
+
+Python uses indentation to decide what is inside the loop and what is outside the loop. Code that is inside the loop will be run for every item in the list. Code that is not indented, which comes after the loop, will be run once just like regular code.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+for dog in dogs:
+    print('I like ' + dog + 's.')
+    print('No, I really really like ' + dog +'s!\n')
+    
+print("\nThat's just how I feel about dogs.")
+```
+```
+I like border collies.
+No, I really really like border collies!
+
+I like australian cattle dogs.
+No, I really really like australian cattle dogs!
+
+I like labrador retrievers.
+No, I really really like labrador retrievers!
+
+
+That's just how I feel about dogs.
+
+```
+- Notice that the last line only runs once, after the loop is completed. Also notice the use of newlines ("\n") to make the output easier to read.
+
+<a name='enumerating_list'></a>Enumerating a list
+---
+When you are looping through a list, you may want to know the index of the current item. You could always use the *list.index(value)* syntax, but there is a simpler way. The *enumerate()* function tracks the index of each item for you, as it loops through the list:
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+print("Results for the dog show are as follows:\n")
+for index, dog in enumerate(dogs):
+    place = str(index)
+    print("Place: " + place + " Dog: " + dog.title())
+```
+
+```
+Results for the dog show are as follows:
+
+Place: 0 Dog: Border Collie
+Place: 1 Dog: Australian Cattle Dog
+Place: 2 Dog: Labrador Retriever
+```
+To enumerate a list, you need to add an *index* variable to hold the current index. So instead of
+```
+    for dog in dogs:
+``` 
+You have
+```
+    for index, dog in enumerate(dogs)
+```  
+The value in the variable *index* is always an integer. If you want to print it in a string, you have to turn the integer into a string:
+```
+    str(index)
+```
+
+- The index always starts at 0, so in this example the value of *place* should actually be the current index, plus one:
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+print("Results for the dog show are as follows:\n")
+for index, dog in enumerate(dogs):
+    place = str(index + 1)
+    print("Place: " + place + " Dog: " + dog.title())
+```
+```
+Results for the dog show are as follows:
+
+Place: 1 Dog: Border Collie
+Place: 2 Dog: Australian Cattle Dog
+Place: 3 Dog: Labrador Retriever
+```
