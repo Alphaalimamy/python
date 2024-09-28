@@ -283,3 +283,367 @@ Place: 1 Dog: Border Collie
 Place: 2 Dog: Australian Cattle Dog
 Place: 3 Dog: Labrador Retriever
 ```
+
+### A common looping error
+One common looping error occurs when instead of using the single variable *dog* inside the loop, we accidentally use the variable that holds the entire list:
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+for dog in dogs:
+    print(dogs)
+```
+
+```
+['border collie', 'australian cattle dog', 'labrador retriever']
+['border collie', 'australian cattle dog', 'labrador retriever']
+['border collie', 'australian cattle dog', 'labrador retriever']
+```
+
+In this example, instead of printing each dog in the list, we print the entire list every time we go through the loop. Python puts each individual item in the list into the variable *dog*, but we never use that variable. Sometimes you will just get an error if you try to do this:
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+for dog in dogs:
+    print('I like ' + dogs + 's.')
+```
+
+## The FOR (iteration) loop
+
+The `for` loop statement is the most widely used iteration mechanisms in Python.
+
+* Almost every structure in Python can be iterated (*element by element*) by a `for` loop
+    - a list, a tuple, a dictionary, $\ldots$ (more details will follows)
+
+* In Python, also `while` loops are permitted, but `for` is the one you would see (and use) most of the time!
+
+### FOR Special keywords
+
+Python allows two **keywords** to be used within a `for` loop: **break** and **continue**.
+
+The two keywords have two **different** meanings:
+
+* **Break** used to *immediatly break the loop and exit!*
+* **Continue** used to *skip to the **next** iteration step!*
+
+**NOTE**: The two keywords are permitted with `while` loops as well!
+
+<a name='exercises_list_loop'></a>Exercises
+---
+#### Ex 3.4: First List - Loop
+- Repeat *First List*, but this time use a loop to print out each value in the list.
+
+#### Ex 3.5: First Neat List - Loop
+- Repeat *First Neat List*, but this time use a loop to print out your statements. Make sure you are writing the same sentence for all values in your list. Loops are not effective when you are trying to generate different output for each value in your list.
+
+#### Ex 3.6: Your First List - Loop
+- Repeat *Your First List*, but this time use a loop to print out your message for each item in your list. Again, if you came up with different messages for each value in your list, decide on one message to repeat for each value in your list.
+
+<a name='common_operations'></a>Common List Operations
+===
+<a name='modifying_elements'></a>Modifying elements in a list
+---
+You can change the value of any element in a list if you know the position of that item.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+dogs[0] = 'australian shepherd'
+print(dogs)
+```
+```
+['australian shepherd', 'australian cattle dog', 'labrador retriever']
+```
+<a name='finding_elements'></a>Finding an element in a list
+---
+If you want to find out the position of an element in a list, you can use the index() function.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+print(dogs.index('australian cattle dog'))
+```
+This method returns a ValueError if the requested item is not in the list.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+print(dogs.index('poodle'))
+```
+<a name='testing_elements'></a>Testing whether an item is in a list
+---
+You can test whether an item is in a list using the "in" keyword. This will become more useful after learning how to use if-else statements.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+
+print('australian cattle dog' in dogs)
+print('poodle' in dogs)
+```
+```
+True
+False
+```
+<a name='adding_items'></a>Adding items to a list
+---
+### Appending items to the end of a list
+We can add an item to a list using the append() method. This method adds the new item to the end of the list.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+dogs.append('poodle')
+
+for dog in dogs:
+    print(dog.title() + "s are cool.")
+```
+```
+Border Collies are cool.
+Australian Cattle Dogs are cool.
+Labrador Retrievers are cool.
+Poodles are cool.
+```
+### Inserting items into a list
+We can also insert items anywhere we want in a list, using the **insert()** function. We specify the position we want the item to have, and everything from that point on is shifted one position to the right. In other words, the index of every item after the new item is increased by one.
+
+```python
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+dogs.insert(1, 'poodle')
+
+print(dogs)
+```
+```
+['border collie', 'poodle', 'australian cattle dog', 'labrador retriever']
+```
+Note that you have to give the position of the new item first, and then the value of the new item. If you do it in the reverse order, you will get an error.
+
+<a name='empty_list'></a>Creating an empty list
+---
+Now that we know how to add items to a list after it is created, we can use lists more dynamically. We are no longer stuck defining our entire list at once.
+
+A common approach with lists is to define an empty list, and then let your program add items to the list as necessary. This approach works, for example, when starting to build an interactive web site. Your list of users might start out empty, and then as people register for the site it will grow. This is a simplified approach to how web sites actually work, but the idea is realistic.
+
+Here is a brief example of how to start with an empty list, start to fill it up, and work with the items in the list. The only new thing here is the way we define an empty list, which is just an empty set of square brackets.
+
+
+```python
+# Create an empty list to hold our users.
+usernames = []
+
+# Add some users.
+usernames.append('Solomon')
+usernames.append('Fatima')
+usernames.append('Abdulai')
+
+# Greet all of our users.
+for username in usernames:
+    print("Welcome, " + username.title() + '!')
+```
+
+```
+Welcome, Solomon!
+Welcome, Fatima!
+Welcome, Abdulai!
+```
+
+If we don't change the order in our list, we can use the list to figure out who our oldest and newest users are.
+
+```python
+# Create an empty list to hold our users.
+usernames = []
+
+# Add some users.
+usernames.append('bernice')
+usernames.append('cody')
+usernames.append('aaron')
+
+# Greet all of our users.
+for username in usernames:
+    print("Welcome, " + username.title() + '!')
+
+# Recognize our first user, and welcome our newest user.
+print("\nThank you for being our very first user, " + usernames[0].title() + '!')
+print("And a warm welcome to our newest user, " + usernames[-1].title() + '!')
+```
+
+```
+Welcome, Solomon!
+Welcome, Fatima!
+Welcome, Abdulai!
+
+Thank you for being our very first user, Solomon!
+And a warm welcome to our newest user, Abdulai!
+```
+
+Note that the code welcoming our newest user will always work, because we have used the index -1. If we had used the index 2 we would always get the third user, even as our list of users grows and grows.
+
+<a name='sorting_list'></a>Sorting a List
+---
+We can sort a list alphabetically, in either order.
+
+```python
+students = ['Gavas', 'Anthony', 'Hamzi']
+
+# Put students in alphabetical order.
+students.sort()
+
+# Display the list in its current order.
+print("Our students are currently in alphabetical order.")
+for student in students:
+    print(student.title())
+
+#Put students in reverse alphabetical order.
+students.sort(reverse=True)
+
+# Display the list in its current order.
+print("\nOur students are now in reverse alphabetical order.")
+for student in students:
+    print(student.title())
+```
+
+```
+Our students are currently in alphabetical order.
+Gavas
+Anthony
+Hamzi
+
+Our students are now in reverse alphabetical order.
+Gavas
+Anthony
+Hamzi
+```
+### *sorted()* vs. *sort()*
+Whenever you consider sorting a list, keep in mind that you can not recover the original order. If you want to display a list in sorted order, but preserve the original order, you can use the *sorted()* function. The *sorted()* function also accepts the optional *reverse=True* argument.
+```python
+students = ['Gavas', 'Anthony', 'Hamzi']
+
+# Display students in alphabetical order, but keep the original order.
+print("Here is the list in alphabetical order:")
+for student in sorted(students):
+    print(student.title())
+
+# Display students in reverse alphabetical order, but keep the original order.
+print("\nHere is the list in reverse alphabetical order:")
+for student in sorted(students, reverse=True):
+    print(student.title())
+
+print("\nHere is the list in its original order:")
+# Show that the list is still in its original order.
+for student in students:
+    print(student.title())
+```
+
+```
+Here is the list in alphabetical order:
+Gavas
+Anthony
+Hamzi
+
+Here is the list in reverse alphabetical order:
+Gavas
+Anthony
+Hamzi
+
+Here is the list in its original order:
+Gavas
+Anthony
+Hamzi
+```
+
+### Reversing a list
+We have seen three possible orders for a list:
+- The original order in which the list was created
+- Alphabetical order
+- Reverse alphabetical order
+
+There is one more order we can use, and that is the reverse of the original order of the list. The *reverse()* function gives us this order.
+
+```python
+students = ['Issato', 'Mentor', 'Rugiatu']
+students.reverse()
+
+print(students)
+```
+```
+['Issato', 'Mentor', 'Rugiatu']
+```
+
+Note that reverse is permanent, although you could follow up with another call to *reverse()* and get back the original order of the list.
+
+### Sorting a numerical list
+All of the sorting functions work for numerical lists as well.
+
+```python
+numbers = [1, 3, 4, 2]
+
+# sort() puts numbers in increasing order.
+numbers.sort()
+print(numbers)
+
+# sort(reverse=True) puts numbers in decreasing order.
+numbers.sort(reverse=True)
+print(numbers)
+```
+```
+[1, 2, 3, 4]
+[4, 3, 2, 1]
+```
+```python
+numbers = [1, 3, 4, 2]
+
+# sorted() preserves the original order of the list:
+print(sorted(numbers))
+print(numbers)
+```
+```
+[1, 2, 3, 4]
+[1, 3, 4, 2]
+```
+```python
+numbers = [1, 3, 4, 2]
+
+# The reverse() function also works for numerical lists.
+numbers.reverse()
+print(numbers)
+```
+```
+[2, 4, 3, 1]
+```
+<a name='length'></a>Finding the length of a list
+---
+You can find the length of a list using the *len()* function.
+
+```python
+usernames = ['Rugiatu', 'Yainkain', 'Alpha']
+user_count = len(usernames)
+
+print(user_count)
+```
+```
+3
+```
+There are many situations where you might want to know how many items in a list. If you have a list that stores your users, you can find the length of your list at any time, and know how many users you have.
+
+```python
+# Create an empty list to hold our users.
+usernames = []
+
+# Add some users, and report on how many users we have.
+usernames.append('Alpha')
+user_count = len(usernames)
+
+print("We have " + str(user_count) + " user!")
+
+usernames.append('Rugiatu')
+usernames.append('Yainkain')
+user_count = len(usernames)
+
+print("We have " + str(user_count) + " users!")
+```
+
+```
+We have 1 user!
+We have 3 users!
+```
+
+On a technical note, the *len()* function returns an integer, which can't be printed directly with strings. We use the *str()* function to turn the integer into a string so that it prints nicely:
