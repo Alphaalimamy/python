@@ -68,8 +68,8 @@
  
   <a name='lists'></a>Lists
 
-  <a name='introducing'></a>Introducing Lists
-===
+
+<a name='introducing'></a>Introducing Lists
 <a name='example'></a>Example
 ---
 A list is a collection of items, that is stored in a variable. The items should be related in some way, but there are no restrictions on what can be stored in a list. Here is a simple example of a list, and how we can quickly access each item in the list.
