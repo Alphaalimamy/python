@@ -712,3 +712,600 @@ This will work: 3
 #### Ex 3.11: List Lengths
 - Copy two or three of the lists you made from the previous exercises, or make up two or three new lists.
 - Print out a series of statements that tell us how long each list is.
+
+<a name='removing_items'></a>Removing Items from a List
+===
+Hopefully you can see by now that lists are a dynamic structure. We can define an empty list and then fill it up as information comes into our program. To become really dynamic, we need some ways to remove items from a list when we no longer need them. You can remove items from a list through their position, or through their value.
+
+
+<a name='removing_by_position'></a>Removing items by position
+---
+If you know the position of an item in a list, you can remove that item using the *del* command. To use this approach, give the command *del* and the name of your list, with the index of the item you want to move in square brackets:
+
+
+```python
+countries = ['Sierra Leone', 'Guinea', 'Liberia']
+# Remove the first dog from the list.
+del countries[1]
+
+print(countries)
+```
+
+```
+['Sierra Leone', 'Liberia']
+```
+
+<a name='removing_by_value'></a>Removing items by value
+---
+You can also remove an item from a list if you know its value. To do this, we use the *remove()* function. Give the name of the list, followed by the word remove with the value of the item you want to remove in parentheses. Python looks through your list, finds the first item with this value, and removes it.
+
+```python
+countries = ['Sierra Leone', 'Guinea', 'Liberia']
+# Remove the last country from the list.
+countries.remove('Liberia')
+
+print(countries)
+```
+
+```
+['Sierra Leone', 'Guinea']
+```
+
+Be careful to note, however, that *only* the first item with this value is removed. If you have multiple items with the same value, you will have some items with this value left in your list.
+
+```python
+letters = ['a', 'b', 'c', 'a', 'b', 'c']
+# Remove the letter a from the list.
+letters.remove('a')
+
+print(letters)
+```
+
+<a name='popping'></a>Popping items from a list
+---
+There is a cool concept in programming called "popping" items from a collection. Every programming language has some sort of data structure similar to Python's lists. All of these structures can be used as queues, and there are various ways of processing the items in a queue.
+
+One simple approach is to start with an empty list, and then add items to that list. When you want to work with the items in the list, you always take the last item from the list, do something with it, and then remove that item. The *pop()* function makes this easy. It removes the last item from the list, and gives it to us so we can work with it. 
+
+This is easier to show with an example
+
+```python
+countries = ['Sierra Leone', 'Guinea', 'Liberia', 'Ghana']
+# Remove the last country from the list.
+countries.pop()
+
+print(countries)
+```
+
+```
+['Sierra Leone', 'Guinea', 'Liberia']
+```
+This is an example of a first-in, last-out approach. The first item in the list would be the last item processed if you kept using this approach. We will see a full implementation of this approach later on, when we learn about *while* loops.
+
+You can actually pop any item you want from a list, by giving the index of the item you want to pop. So we could do a first-in, first-out approach by popping the first iem in the list:
+```python
+countries = ['Sierra Leone', 'Guinea', 'Liberia', 'Ghana']
+# Remove the last country from the list.
+countries.pop(-1)
+
+print(countries)
+```
+
+```
+['Sierra Leone', 'Guinea', 'Liberia']
+```
+<a name='exercises_removing_items'></a>Exercises
+---
+#### Famous People
+- Make a list that includes the names of four famous people.
+- Remove each person from the list, one at a time, using each of the four methods we have just seen:
+    - Pop the last item from the list, and pop any item except the last item.
+    - Remove one item by its position, and one item by its value.
+- Print out a message that there are no famous people left in your list, and print your list to prove that it is empty.
+
+```python
+# Famous People
+fpeople = ['david bowie', 'robert plant', 'obama', 'taylor swift']
+#Remove each person from the list, one at a time, using each of the four methods we have just seen
+fpeople.remove('taylor swift')
+print(fpeople)
+del fpeople[2]
+print(fpeople)
+bowie=fpeople.pop(0)
+print(bowie,fpeople)
+last=fpeople.pop()
+print('there are no more famous people in the list')
+print(fpeople)
+# put your code here
+```
+
+```
+['david bowie', 'robert plant', 'obama']
+['david bowie', 'robert plant']
+david bowie ['robert plant']
+there are no more famous people in the list
+```
+```python
+#Pop the last item from the list
+fpeople = ['david bowie', 'robert plant', 'obama', 'taylor swift']
+fpeople.pop()
+print(fpeople)
+# and pop any item except the last item.
+fpeople = ['david bowie', 'robert plant', 'obama', 'taylor swift']
+for _ in range(0,len(fpeople)-1):
+    fpeople.pop(0)
+print(fpeople)
+
+fpeople = ['david bowie', 'robert plant', 'obama', 'taylor swift']
+fpeople.remove('obama')
+del fpeople[2]
+print(fpeople)
+```
+
+````
+['david bowie', 'robert plant', 'obama']
+['taylor swift']
+['david bowie', 'robert plant']
+```
+
+<a name='slicing'></a>Slicing a List
+===
+Since a list is a collection of items, we should be able to get any subset of those items. For example, if we want to get just the first three items from the list, we should be able to do so easily. The same should be true for any three items in the middle of the list, or the last three items, or any x items from anywhere in the list. These subsets of a list are called *slices*.
+
+To get a subset of a list, we give the position of the first item we want, and the position of the first item we do *not* want to include in the subset. So the slice *list[0:3]* will return a list containing items 0, 1, and 2, but not item 3.
+
+```python
+usernames = ['Alpha', 'Rugiatu', 'Fatima', 'Yainkain', 'Adama']
+
+# Grab the first three users in the list.
+first_batch = usernames[0:3]
+
+for user in first_batch:
+    print(user.title())
+
+```
+```
+Alpha
+
+Rugiatu
+
+Fatima
+
+Adama
+```
+
+If you want to grab everything up to a certain position in the list, you can also leave the first index blank:
+
+
+```python
+usernames = ['Alpha', 'Rugiatu', 'Fatima', 'Yainkain', 'Adama']
+
+# Grab the first three users in the list.
+first_batch = usernames[:3]
+
+for user in first_batch:
+    print(user.title())
+```
+```
+Alpha
+
+Rugiatu
+
+Fatima
+
+Adama
+```
+
+
+When we grab a slice from a list, the original list is not affected:
+
+```python
+usernames = ['Alpha', 'Rugiatu', 'Fatima', 'Yainkain', 'Adama']
+
+# Grab the first three users in the list.
+first_batch = usernames[0:3]
+
+for user in first_batch:
+    print(user.title())
+```
+
+```
+Alpha
+
+Rugiatu
+
+Fatima
+
+Adama
+```
+
+We can get any segment of a list we want, using the slice method:
+
+```python
+usernames = ['Alpha', 'Rugiatu', 'Fatima', 'Yainkain', 'Adama']
+
+# Grab a batch from the middle of the list.
+middle_batch = usernames[1:4]
+
+for user in middle_batch:
+    print(user.title())
+```
+
+```
+Rugiatu
+
+Fatima
+
+```
+
+To get all items from one position in the list to the end of the list, we can leave off the second index:
+
+```python
+usernames = ['Alpha', 'Rugiatu', 'Fatima', 'Yainkain', 'Adama', 'Issato','Salam']
+
+# Grab the first three users in the list.
+first_batch = usernames[2:]
+
+for user in first_batch:
+    print(user.title())
+```
+
+```
+Fatima
+
+Adama
+
+Issato
+
+Salam
+```
+
+
+<a name='exercises_slicing'></a>Exercises
+
+
+#### Ex 3.13: Alphabet Slices
+- Store the first ten letters of the alphabet in a list.
+- Use a slice to print out the first three letters of the alphabet.
+- Use a slice to print out any three letters from the middle of your list.
+- Use a slice to print out the letters from any point in the middle of your list, to the end.
+
+#### Ex 3.14: Protected List
+- Your goal in this exercise is to prove that copying a list protects the original list.
+- Make a list with three people's names in it.
+- Use a slice to make a copy of the entire list.
+- Add at least two new names to the new copy of the list.
+- Make a loop that prints out all of the names in the original list, along with a message that this is the original list.
+- Make a loop that prints out all of the names in the copied list, along with a message that this is the copied list.
+
+<a name='comprehensions'></a>List Comprehensions
+===
+I thought carefully before including this section. If you are brand new to programming, list comprehensions may look confusing at first. They are a shorthand way of creating and working with lists. It is good to be aware of list comprehensions, because you will see them in other people's code, and they are really useful when you understand how to use them. That said, if they don't make sense to you yet, don't worry about using them right away. When you have worked with enough lists, you will want to use comprehensions. For now, it is good enough to know they exist, and to recognize them when you see them. If you like them, go ahead and start trying to use them now.
+
+<a name='comprehensions_numerical'></a>Numerical Comprehensions
+---
+Let's consider how we might make a list of the first ten square numbers. We could do it like this:
+
+```python
+# Store the first ten square numbers in a list.
+# Make an empty list that will hold our square numbers.
+squares = []
+
+# Go through the first ten numbers, square them, and add them to our list.
+for number in range(1,11):
+    new_square = number**2
+    squares.append(new_square)
+    
+# Show that our list is correct.
+for square in squares:
+    print(square)
+
+```
+
+```
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+
+```
+
+This should make sense at this point. If it doesn't, go over the code with these thoughts in mind:
+- We make an empty list called *squares* that will hold the values we are interested in.
+- Using the *range()* function, we start a loop that will go through the numbers 1-10.
+- Each time we pass through the loop, we find the square of the current number by raising it to the second power.
+- We add this new value to our list *squares*.
+- We go through our newly-defined list and print out each square.
+
+Now let's make this code more efficient. We don't really need to store the new square in its own variable *new_square*; we can just add it directly to the list of squares. The line
+
+    ```
+        new_square = number**2
+    ```
+
+is taken out, and the next line takes care of the squaring:
+```
+# Store the first ten square numbers in a list.
+# Make an empty list that will hold our square numbers.
+squares = []
+
+# Go through the first ten numbers, square them, and add them to our list.
+for number in range(1,11):
+    squares.append(number**2)
+    
+# Show that our list is correct.
+for square in squares:
+    print(square)
+
+```
+
+```
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+```
+List comprehensions allow us to collapse the first three lines of code into one line. Here's what it looks like:
+
+```python
+# Store the first ten square numbers in a list.
+squares = [number**2 for number in range(1,11)]
+
+# Show that our list is correct.
+for square in squares:
+    print(square)
+```
+
+```
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+
+```
+
+<a name='comprehensions_non_numerical'></a>Non-numerical comprehensions
+---
+We can use comprehensions with non-numerical lists as well. In this case, we will create an initial list, and then use a comprehension to make a second list from the first one. Here is a simple example, without using comprehensions:
+
+```python
+# Consider some students.
+students = ['Fatima', 'Issato', 'Salami']
+
+# Let's turn them into great students.
+great_students = []
+for student in students:
+    great_students.append(student.title() + " the great!")
+
+# Let's greet each great student.
+for great_student in great_students:
+    print("Hello, " + great_student)
+```
+
+```
+Hello, Fatima the great!
+Hello, Issato the great!
+Hello, Salami the great!
+```
+
+To use a comprehension in this code, we want to write something like this:
+
+great_students = [add 'the great' to each *student*, for each *student* in the list of *students*]
+
+Here's what it looks like:
+
+```python
+# Consider some students.
+students = ['Fatima', 'Issato', 'Salami']
+
+# Let's turn them into great students.
+great_students = [student.title() + " the great!" for student in students]
+
+# Let's greet each great student.
+for great_student in great_students:
+    print("Hello, " + great_student)
+
+```
+<a name='exercises_comprehensions'></a>Exercises
+---
+If these examples are making sense, go ahead and try to do the following exercises using comprehensions. If not, try the exercises without comprehensions. You may figure out how to use comprehensions after you have solved each exercise the longer way.
+
+#### Ex 3.18: Multiples of Ten
+- Make a list of the first ten multiples of ten (10, 20, 30... 90, 100). There are a number of ways to do this, but try to do it using a list comprehension. Print out your list.
+
+#### Ex 3.19: Cubes
+- We saw how to make a list of the first ten squares. Make a list of the first ten cubes (1, 8, 27... 1000) using a list comprehension, and print them out.
+
+#### Ex 3.20: Awesomeness
+- Store five names in a list. Make a second list that adds the phrase "is awesome!" to each name, using a list comprehension. Print out the awesome version of the names.
+
+#### Ex 3.21: Working Backwards
+- Write out the following code without using a list comprehension:
+
+    plus_thirteen = [number + 13 for number in range(1,11)]
+
+
+
+<a name='strings_as_lists'></a>Strings as Lists
+===
+Now that you have some familiarity with lists, we can take a second look at strings. A string is really a list of characters, so many of the concepts from working with lists behave the same with strings.
+
+
+<a name='list_of_characters'></a>Strings as a list of characters
+---
+We can loop through a string using a *for* loop, just like we loop through a list:
+
+```python
+message = "Hello!"
+
+for letter in message:
+    print(letter)
+```
+
+```
+H
+e
+l
+l
+o
+!
+```
+We can create a list from a string. The list will have one element for each character in the string:
+
+```python
+message = "Hello world!"
+
+message_list = list(message)
+print(message_list)
+```
+
+```
+['H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '!']`
+```
+
+
+<a name='slicing_strings'></a>Slicing strings
+---
+We can access any character in a string by its position, just as we access individual items in a list:
+
+
+```python
+message = "Hello World!"
+first_char = message[0]
+last_char = message[-1]
+
+print(first_char, last_char)
+```
+We can extend this to take slices of a string:
+
+```
+message = "Hello World!"
+first_three = message[:3]
+last_three = message[-3:]
+
+print(first_three, last_three)
+```
+<a name='finding_substrings'></a>Finding substrings
+---
+Now that you have seen what indexes mean for strings, we can search for *substrings*. A substring is a series of characters that appears in a string.
+
+You can use the *in* keyword to find out whether a particular substring appears in a string:
+
+```python
+message = "I like cats and dogs."
+dog_present = 'dog' in message
+print(dog_present)
+```
+```
+True
+```
+
+If you want to know where a substring appears in a string, you can use the *find()* method. The *find()* method tells you the index at which the substring begins.
+
+```python
+message = "I like cats and dogs."
+dog_index = message.find('dog')
+print(dog_index)
+```
+Note, however, that this function only returns the index of the first appearance of the substring you are looking for. If the substring appears more than once, you will miss the other substrings.
+
+```python
+message = "I like cats and dogs, but I'd much rather own a dog."
+dog_index = message.find('dog')
+print(dog_index)
+```
+If you want to find the last appearance of a substring, you can use the *rfind()* function:
+
+```python
+last_dog_index = message.rfind('dog')
+print(last_dog_index)
+```
+```
+48
+```
+
+<a name='replacing_substrings'></a>Replacing substrings
+---
+You can use the *replace()* function to replace any substring with another substring. To use the *replace()* function, give the substring you want to replace, and then the substring you want to replace it with. You also need to store the new string, either in the same string variable or in a new variable.
+
+```python
+message = "I like cats and dogs, but I'd much rather own a dog."
+message = message.replace('dog', 'snake')
+print(message)
+```
+```
+I like cats and snakes, but I'd much rather own a snake.
+```
+<a name='counting_substrings'></a>Counting substrings
+---
+If you want to know how many times a substring appears within a string, you can use the *count()* method.
+
+```python
+message = "I like cats and dogs, but I'd much rather own a dog."
+number_dogs = message.count('dog')
+print(number_dogs)
+```
+<a name='splitting_strings'></a>Splitting strings
+---
+Strings can be split into a set of substrings when they are separated by a repeated character. If a string consists of a simple sentence, the string can be split based on spaces. The *split()* function returns a list of substrings. The *split()* function takes one argument, the character that separates the parts of the string.
+
+```python
+message = "I like cats and dogs, but I'd much rather own a dog."
+words = message.split(' ')
+print(words)
+```
+```
+['I', 'like', 'cats', 'and', 'dogs,', 'but', "I'd", 'much', 'rather', 'own', 'a', 'dog.']
+```
+Notice that the punctuation is left in the substrings.
+
+It is more common to split strings that are really lists, separated by something like a comma. The *split()* function gives you an easy way to turn comma-separated strings, which you can't do much with in Python, into lists. Once you have your data in a list, you can work with it in much more powerful ways.
+
+```python
+animals = "dog, cat, tiger, mouse, liger, bear"
+
+# Rewrite the string as a list, and store it in the same variable
+animals = animals.split(',')
+print(animals)
+```
+```
+['dog', ' cat', ' tiger', ' mouse', ' liger', ' bear']
+```
+
+<a name='exercises_strings_as_lists'></a>Exercises
+---
+#### Ex 3.22: Listing a Sentence
+- Store a single sentence in a variable. Use a for loop to print each character from your sentence on a separate line.
+
+#### Ex 3.23:  Sentence List
+- Store a single sentence in a variable. Create a list from your sentence. Print your raw list (don't use a loop, just print the list).
+
+#### Ex 3.24:  Sentence Slices
+- Store a sentence in a variable. Using slices, print out the first five characters, any five consecutive characters from the middle of the sentence, and the last five characters of the sentence.
+
+#### Ex 3.25:  Finding Python
+- Store a sentence in a variable, making sure you use the word *Python* at least twice in the sentence.
+- Use the *in* keyword to prove that the word *Python* is actually in the sentence.
+- Use the *find()* function to show where the word *Python* first appears in the sentence.
+- Use the *rfind()* function to show the last place *Python* appears in the sentence.
+- Use the *count()* function to show how many times the word *Python* appears in your sentence.
+- Use the *split()* function to break your sentence into a list of words. Print the raw list, and use a loop to print each word on its own line.
+- Use the *replace()* function to change *Python* to *Ruby* in your sentence.
