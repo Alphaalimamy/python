@@ -819,6 +819,7 @@ print(fpeople)
 # put your code here
 ```
 
+#### Output
 ```
 ['david bowie', 'robert plant', 'obama']
 ['david bowie', 'robert plant']
@@ -841,8 +842,8 @@ fpeople.remove('obama')
 del fpeople[2]
 print(fpeople)
 ```
-
-````
+#### Output
+```
 ['david bowie', 'robert plant', 'obama']
 ['taylor swift']
 ['david bowie', 'robert plant']
