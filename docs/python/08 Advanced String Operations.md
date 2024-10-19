@@ -32,7 +32,6 @@ a
 t
 u
 ```
-
 ```
 **1st iteration**
 for ch in name:
