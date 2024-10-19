@@ -37,3 +37,4 @@ u
 for ch in name:
   print(ch)
 ```
+[string.pdf](./string.pdf)
