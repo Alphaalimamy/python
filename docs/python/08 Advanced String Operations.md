@@ -141,3 +141,72 @@ print(middle_name)
 ```
 amara
 ```
+
+Invalid indexes do not cause slicing expressions to raise an exception. For example:
+- If the end index specifies a position beyond the end of the string, Python will use the length of the string instead.
+- If the start index specifies a position before the beginning of the string, Python will use 0 instead.
+- If the start index is greater than the end index, the slicing expression will return an empty string.
+
+## Extracting Characters from a String
+At a university, each student is assigned a system login name, which the student uses to log into the campus computer system. As part of your internship with the university’s Information Technology department, you have been asked to write the code that generates system login names for students. You will use the following algorithm to generate a login name:
+- Get the first three characters of the student’s first name. (If the first name is less than three characters in length, use the entire first name.)
+- Get the first three characters of the student’s last name. (If the last name is less than three characters in length, use the entire last name.)
+- Get the last three characters of the student’s ID number. (If the ID number is less than three characters in length, use the entire ID number.)
+- Concatenate the three sets of characters to generate the login name.
+
+For example, if a student’s name is Alpha Alimamy, and his ID number is ENG6721, his login name would be AlpKam721. You decide to write a function named get_login_name that accepts a student’s first name, last name, and ID number as arguments and returns the student’s login name as a string. You will save the function in a module named login.py. This module can then be imported into any Python program that needs to generate a login
+name.
+```python
+def get_login_name(first, last, idnumber):
+    """
+    This function generates a system login name by accepting
+    a user's first name, last name, and ID number.
+
+    Parameters:
+    first (str): The user's first name.
+    last (str): The user's last name.
+    idnumber (str): The user's ID number.
+
+    Returns:
+    str: A system login name.
+    """
+    
+    # Get the first three letters of the first name.
+    # If the name is shorter than 3 characters, return the entire first name.
+    set1 = first[0:3]
+
+    # Get the first three letters of the last name.
+    # If the last name is shorter than 3 characters, return the entire last name.
+    set2 = last[0:3]
+
+    # Get the last three characters of the ID number.
+    # If the ID number is shorter than 3 characters, return the entire ID number.
+    set3 = idnumber[-3:]
+
+    # Combine the three sets of characters to create the login name.
+    login_name = set1 + set2 + set3
+
+    # Return the generated login name.
+    return login_name
+```
+
+```python
+# This program gets the user's first name, last name, and student ID number.
+# Using this data, it generates a system login name.
+
+import login  # Importing the module containing the get_login_name function
+
+def main():
+    # Get the user's first name, last name, and ID number.
+    first = input('Enter your first name: ')
+    last = input('Enter your last name: ')
+    idnumber = input('Enter your student ID number: ')
+
+    # Display the generated system login name.
+    print('Your system login name is:')
+    print(login.get_login_name(first, last, idnumber))
+
+# Call the main function to run the program.
+if __name__ == "__main__":
+    main()
+```
