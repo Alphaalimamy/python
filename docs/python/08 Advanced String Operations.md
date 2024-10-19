@@ -61,3 +61,52 @@ def main():
 # Call the main function.
 main()
 ```
+
+### Indexing
+- Another way that you can access the individual characters in a string is with an index.
+- Each character in a string has an index that specifies its position in the string.
+- Indexing starts at 0, so the index of the first character is 0, the index of the second character is 1, and so forth.
+- The index of the last character in a string is 1 less than the number of characters in the string
+
+Here is another example:
+```python
+my_town = 'Mayakie is in Mambolo'
+print(my_town[0], my_town[5], my_town[9])
+```
+This code will print the following:
+```
+M i s
+```
+
+### String Concatenation
+- A common operation that performed on strings is concatenation, or appending one string to the end of another string.
+- The + operator produces a string that is the combination of the two strings used as its operands.
+```python
+message = 'Hello ' + 'world'
+print(message)
+```
+```
+Hello world
+```
+```python
+first_name = 'Kamara' 
+last_name = 'Alpha' 
+full_name = first_name + ' ' + last_name e
+print(full_name)
+```
+```
+Kamara Alpha
+```
+### Strings Are Immutable
+In Python, strings are immutable, which means that once they are created, they cannot be changed. Some operations, such as concatenation, give the impression that they modify strings, but in reality they do not.
+```python
+# This program concatenates strings.
+def main():
+    name = 'Alpha'
+    print('The name is', name)
+    name = name + ' Kamara'
+    print('Now the name is', name)
+
+# Call the main function.
+main()
+```
