@@ -210,3 +210,307 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+### Testing, Searching, and Manipulating Strings
+Python provides operators and methods for testing strings, searching the contents of strings, and getting modified copies of strings.
+Testing Strings with **in** and **not** in In Python you can use the in operator to determine whether one string is contained in
+another string. Here is the general format of an expression using the in operator with two strings:
+```
+  string1 in string2
+```
+**string1** and **string2** can be either string literals or variables referencing strings. The expression returns true if string1 is found in string2. For example, look at the following code
+
+```python
+text = 'Four score and seven years ago'
+if 'seven' in text:
+  print('The string "seven" was found.')
+else:
+  print('The string "seven" was not found.')
+```
+```
+The string "seven" was found.
+```
+You can use the not in operator to determine whether one string is not contained in another string. Here is an example:
+```python
+names = 'Rugiatu Fatima Issato Salam Anthony Sahid'
+if 'Alpha' not in names:
+  print('Alpha was not found.')
+else:
+  print('Alpha was found.')
+```
+```
+Alpha was not found.
+```
+### String Methods
+- Testing the values of strings
+- Performing various modifications
+- Searching for substrings and replacing sequences of characters
+
+### String Testing Methods
+In Python, there are several string testing methods that allow you to check specific characteristics of a string. These methods return True or False based on the string content. Here's a summary and example based on the isdigit() method:
+```python
+string1 = '1200'
+if string1.isdigit():
+    print(string1, 'contains only digits.')
+else:
+    print(string1, 'contains characters other than digits.')
+```
+```
+1200 contains only digits.
+```
+```python
+string2 = '123abc'
+if string2.isdigit():
+    print(string2, 'contains only digits.')
+else:
+    print(string2, 'contains characters other than digits.')
+```
+```
+123abc contains characters other than digits.
+```
+| Method     | Description                                                                                                                        |
+|------------|------------------------------------------------------------------------------------------------------------------------------------|
+| `isalnum()` | Returns `True` if the string contains only alphabetic letters or digits and is at least one character in length. Returns `False` otherwise. |
+| `isalpha()` | Returns `True` if the string contains only alphabetic letters and is at least one character in length. Returns `False` otherwise.          |
+| `isdigit()` | Returns `True` if the string contains only numeric digits and is at least one character in length. Returns `False` otherwise.              |
+| `islower()` | Returns `True` if all the alphabetic letters in the string are lowercase and the string contains at least one alphabetic letter. Returns `False` otherwise. |
+| `isspace()` | Returns `True` if the string contains only whitespace characters and is at least one character in length. Returns `False` otherwise.       |
+| `isupper()` | Returns `True` if all the alphabetic letters in the string are uppercase and the string contains at least one alphabetic letter. Returns `False` otherwise. |
+
+```python
+# This program demonstrates several string testing methods.
+
+def main():
+    # Get a string from the user.
+    user_string = input('Enter a string: ')
+
+    print('This is what I found about that string:')
+
+    # Test the string.
+    if user_string.isalnum():
+        print('The string is alphanumeric.')
+    if user_string.isdigit():
+        print('The string contains only digits.')
+    if user_string.isalpha():
+        print('The string contains only alphabetic characters.')
+    if user_string.isspace():
+        print('The string contains only whitespace characters.')
+    if user_string.islower():
+        print('The letters in the string are all lowercase.')
+    if user_string.isupper():
+        print('The letters in the string are all uppercase.')
+
+# Call the main function to run the program.
+if __name__ == "__main__":
+    main()
+```
+| Method        | Description                                                                                                                     |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `lower()`     | Returns a copy of the string with all alphabetic letters converted to lowercase. Non-alphabetic characters remain unchanged.     |
+| `lstrip()`    | Returns a copy of the string with all leading whitespace characters removed (spaces, newlines `\n`, and tabs `\t`).               |
+| `lstrip(char)`| Returns a copy of the string with all instances of `char` that appear at the beginning of the string removed.                     |
+| `rstrip()`    | Returns a copy of the string with all trailing whitespace characters removed (spaces, newlines `\n`, and tabs `\t`).              |
+| `rstrip(char)`| Returns a copy of the string with all instances of `char` that appear at the end of the string removed.                           |
+| `strip()`     | Returns a copy of the string with all leading and trailing whitespace characters removed.                                         |
+| `strip(char)` | Returns a copy of the string with all instances of `char` that appear at the beginning and end of the string removed.             |
+| `upper()`     | Returns a copy of the string with all alphabetic letters converted to uppercase. Non-alphabetic characters remain unchanged.      |
+
+
+In this example, the lower() and upper() methods are used to handle case-insensitive comparisons effectively, ensuring that whether the user enters 'y' or 'Y', the loop continues.
+
+### Example 1: Using lower() for Case-Insensitive Comparison
+```python
+again = 'y'
+while again.lower() == 'y':  # Converts 'again' to lowercase before comparison
+    print('Hello')
+    print('Do you want to see that again?')
+    again = input('y = yes, anything else = no: ')
+```
+### Example 2: Using upper() for Case-Insensitive Comparison
+```python
+again = 'y'
+while again.upper() == 'Y':  # Converts 'again' to uppercase before comparison
+    print('Hello')
+    print('Do you want to see that again?')
+    again = input('y = yes, anything else = no: ')
+```
+
+### Searching and Replacing
+Programs commonly need to search for substrings, or strings that appear within other strings. For example, suppose you have a document opened in your word processor, and
+you need to search for a word that appears somewhere in it. The word that you are searching for is a substring that appears inside a larger string, the document.
+
+| Method              | Description                                                                                                   |
+|---------------------|---------------------------------------------------------------------------------------------------------------|
+| `endswith(substring)` | Returns `True` if the string ends with the specified `substring`; otherwise, it returns `False`.             |
+| `find(substring)`    | Returns the lowest index in the string where the specified `substring` is found; returns `-1` if not found.  |
+| `replace(old, new)`  | Returns a copy of the string with all instances of `old` replaced by `new`.                                  |
+| `startswith(substring)` | Returns `True` if the string starts with the specified `substring`; otherwise, it returns `False`.          |
+
+Here’s a detailed explanation of the endswith, startswith, find, and replace methods, along with examples:
+
+#### 1. endswith Method
+The endswith method checks if a string ends with a specified substring.
+
+```python
+filename = input('Enter the filename: ')
+if filename.endswith('.txt'):
+    print('That is the name of a text file.')
+elif filename.endswith('.py'):
+    print('That is the name of a Python source file.')
+elif filename.endswith('.doc'):
+    print('That is the name of a word processing document.')
+else:
+    print('Unknown file type.')
+```
+#### 2. startswith Method
+Similar to endswith, the startswith method checks if a string begins with a specified substring.
+```python
+greeting = 'Hello, World!'
+if greeting.startswith('Hello'):
+    print('The greeting starts with "Hello".')
+else:
+    print('The greeting does not start with "Hello".')
+```
+#### 3. find Method
+The find method searches for a specified substring within a string and returns the lowest index where it is found. If the substring is not found, it returns -1.
+```python
+string = 'Four score and seven years ago'
+position = string.find('seven')
+if position != -1:
+    print('The word "seven" was found at index', position)
+else:
+    print('The word "seven" was not found.')
+```
+```
+The word "seven" was found at index 15
+```
+#### 4. replace Method
+The replace method returns a copy of the string with all occurrences of a specified substring replaced by another substring.
+```python
+string = 'Four score and seven years ago'
+new_string = string.replace('years', 'days')
+print(new_string)
+```
+
+
+# In the Spotlight: Validating the Characters in a Password
+
+At the university, passwords for the campus computer system must meet the following requirements:
+- The password must be at least seven characters long.
+- It must contain at least one uppercase letter.
+- It must contain at least one lowercase letter.
+- It must contain at least one numeric digit.
+
+When a student sets up his or her password, the password must be validated to ensure it meets these requirements. 
+
+You have been asked to write the code that performs this validation. You decide to write a function named `valid_password` that accepts the password as an argument and returns either `True` or `False`, to indicate whether it is valid.
+
+## Algorithm for the `valid_password` Function
+
+```
+If the password’s length is seven characters or greater:
+    Set the correct_length variable to true
+
+for each character in the password:
+    if the character is an uppercase letter:
+        Set the has_uppercase variable to true
+    if the character is a lowercase letter:
+        Set the has_lowercase variable to true
+    if the character is a digit:
+        Set the has_digit variable to true
+
+If correct_length and has_uppercase and has_lowercase and has_digit:
+    Set the is_valid variable to true
+else:
+    Set the is_valid variable to false
+
+Return the is_valid variable
+Earlier (in the previous In the Spotlight section), you created a function named `get_login_name` and stored that function in the login module. Because the `valid_password` function’s purpose is related to the task of creating a student’s login account, you decide to store the `valid_password` function in the login module as well.
+
+```
+
+### Step 1: Implementing the valid_password Function
+```python
+def valid_password(password):
+    # Initialize validation flags
+    correct_length = False
+    has_uppercase = False
+    has_lowercase = False
+    has_digit = False
+
+    # Check the length requirement
+    if len(password) >= 7:
+        correct_length = True
+
+    # Check for uppercase, lowercase, and digits
+    for char in password:
+        if char.isupper():
+            has_uppercase = True
+        if char.islower():
+            has_lowercase = True
+        if char.isdigit():
+            has_digit = True
+
+    # Determine if the password is valid
+    is_valid = correct_length and has_uppercase and has_lowercase and has_digit
+    return is_valid
+```
+### Step 2: Adding the Function to the login Module
+Now, let's assume you have a login module where you have other related functions (like get_login_name). Here’s how the login module would look with the valid_password function added:
+
+```python
+# login.py
+
+def get_login_name(first, last, idnumber):
+    # Get the first three letters of the first name
+    set1 = first[0:3]
+    # Get the first three letters of the last name
+    set2 = last[0:3]
+    # Get the last three characters of the student ID
+    set3 = idnumber[-3:]
+    # Put the sets of characters together
+    login_name = set1 + set2 + set3
+    return login_name
+
+def valid_password(password):
+    # Initialize validation flags
+    correct_length = False
+    has_uppercase = False
+    has_lowercase = False
+    has_digit = False
+
+    # Check the length requirement
+    if len(password) >= 7:
+        correct_length = True
+
+    # Check for uppercase, lowercase, and digits
+    for char in password:
+        if char.isupper():
+            has_uppercase = True
+        if char.islower():
+            has_lowercase = True
+        if char.isdigit():
+            has_digit = True
+
+    # Determine if the password is valid
+    is_valid = correct_length and has_uppercase and has_lowercase and has_digit
+    return is_valid
+```
+
+### Step 3: Using the valid_password Function
+Now that the valid_password function is part of the login module, you can use it in your main program like this:
+```python
+import login
+
+def main():
+    # Get the user's password
+    password = input('Enter a password: ')
+
+    # Validate the password
+    if login.valid_password(password):
+        print('Password is valid.')
+    else:
+        print('Password is invalid. It must be at least 7 characters long, contain at least one uppercase letter, one lowercase letter, and one numeric digit.')
+
+# Call the main function
+main()
+```
