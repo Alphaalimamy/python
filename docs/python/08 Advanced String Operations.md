@@ -34,7 +34,7 @@ u
 ```
 
 ```
-*1st iteration*
+**1st iteration**
 for ch in name:
   print(ch)
 ```
