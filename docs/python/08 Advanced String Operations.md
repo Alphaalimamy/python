@@ -32,7 +32,7 @@ a
 t
 u
 ```
-[string.pdf](./string.pdf)
+
 
 ```python
 # This program counts the number of times he letter T (uppercase or lowercase) appears in a string.
@@ -128,4 +128,16 @@ string[start : end]
 full_name = 'Alpha Alimamy Kamara'
 middle_name = full_name[6:10]
 print(middle_name)
+```
+```
+Alim
+```
+
+```python
+full_name = 'Alpha Alimamy Kamara'
+middle_name = full_name[-5:]
+print(middle_name)
+```
+```
+amara
 ```
