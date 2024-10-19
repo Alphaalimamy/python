@@ -110,3 +110,15 @@ def main():
 # Call the main function.
 main()
 ```
+
+Assume the variable name references a string. Write a for loop that prints each character in the string.
+1. What is the index of the first character in a string?
+2. If a string has 10 characters, what is the index of the last character?
+3. What happens if you try to use an invalid index to access a character in a string?
+4. How do you find the length of a string?
+5. What is wrong with the following code?
+    ```
+    animal = 'Tiger'
+    animal[0] = 'L'
+    ```
+
