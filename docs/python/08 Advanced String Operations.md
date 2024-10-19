@@ -32,11 +32,6 @@ a
 t
 u
 ```
-```
-**1st iteration**
-for ch in name:
-  print(ch)
-```
 [string.pdf](./string.pdf)
 
 ```python
@@ -122,3 +117,15 @@ Assume the variable name references a string. Write a for loop that prints each 
     animal[0] = 'L'
     ```
 
+### String Slicing
+- You can use slicing expressions to select a range of characters from a string
+- To get a slice of a string, you write an expression in the following general format:
+
+```
+string[start : end]
+```
+```python
+full_name = 'Alpha Alimamy Kamara'
+middle_name = full_name[6:10]
+print(middle_name)
+```
